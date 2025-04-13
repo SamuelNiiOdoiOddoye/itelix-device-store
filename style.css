@@ -1,0 +1,293 @@
+/* Declaring fonts */
+@font-face {
+    font-family: "Inter Regular";
+    src: url("fonts/inter/static/Inter_28pt-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Inter Bold";
+    src: url("fonts/inter/static/Inter_28pt-ExtraBold.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Montserrat Regular";
+    src: url("fonts/Montserrat/static/Montserrat-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Montserrat Bold";
+    src: url("fonts/Montserrat/static/Montserrat-Bold.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Inria Sans Regular";
+    src: url("fonts/Inria Sans/InriaSans-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Inria Sans Bold";
+    src: url("fonts/Inria Sans/InriaSans-Bold.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Indie Flower Regular";
+    src: url("fonts/Indie Flower/IndieFlower-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #D9D9D9;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Inter Regular";
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.nav-links {
+    font-family: "Inter Regular";
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.nav-links li {
+    padding: 10px 15px;
+    font-family: "Inter Regular";
+}
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 10px;
+    transition: 0.3s;
+    font-family: "Inter Regular";
+}
+.nav-links a:hover {
+    color: #FF6600;
+    font-weight: bold;
+}
+.nav-links img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+/* Dropdown */
+.dropdown {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #968787;
+    display: none;
+    min-width: 150px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 10;
+}
+.dropdown li {
+    width: 100px;
+    background-color: #968787;
+}
+.dropdown a {
+    padding: 10px;
+    background-color: #968787;
+    display: block;
+    color: black;
+    transition: 0.3s;
+}
+.dropdown a:hover {
+    background-color: #968787;
+}
+.nav-item:hover .dropdown {
+    display: block;
+    background-color: #968787;
+}
+.nav-item {
+    position: relative;
+    padding: 10px 20px;
+}
+.nav-item .dropdown {
+    display: none;
+}
+.nav-item.show-dropdown .dropdown {
+    display: block;
+}
+
+/* General */
+body {
+    background-color: #7B7979;
+    font-family: "Inter Regular";
+    margin: 0;
+    padding: 0;
+}
+.hero-section {
+    background-color: #EFE0E0;
+    font-family: "Indie Flower Regular";
+    text-align: center;
+}
+.custom-pre {
+    background-color: #EFE0E0;
+    font-size: small;
+    font-family: "Indie Flower Regular";
+    text-align: center;
+}
+.hero-section-header {
+    background-color: inherit;
+    font-family: "Inria Sans Regular";
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: inherit;
+    font-size: 40px;
+}
+
+/* Responsive category styling */
+@media (max-width: 768px) {
+    .categories-section {
+        background-color: #756767;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 40px 20px;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Category Section */
+.categories-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #756767;
+    padding: 20px;
+}
+.category {
+    text-align: center;
+    background-color: #D9D9D9;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.category img {
+    width: 150 px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.category p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Inria Sans Regular";
+}
+.category:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer */
+.footer {
+    background-color: #d9d9d9;
+    font-family: "Inria Sans Regular";
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.footer-header {
+    font-family: "Inria Sans Regular";
+    font-weight: bold;
+    font-size: 18px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    margin-bottom: 5px;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Inria Sans Regular";
+    width: 80%;
+    max-width: 1000px;
+    margin-bottom: 15px;
+    gap: 20px;
+}
+.footer-left,
+.footer-right,
+.footer-center {
+    background-color: #D9D9D9;
+    font-family: "Inria Sans Regular";
+    flex: 1;
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+    max-width: 100%;
+}
+.footer-left {
+    text-align: left;
+}
+.footer-center {
+    text-align: center;
+}
+.footer-right {
+    text-align: right;
+}
+
+/* Container Section */
+.container {
+    font-size: 20px;
+    font-family: "Inter Regular";
+    background-color: #756767;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 97%;
+    padding: 20px;
+}
+.left-side {
+    flex: 1;
+    max-width: 45%;
+    text-align: left;
+}
+.right-side {
+    flex: 1;
+    max-width: 45%;
+    text-align: right;
+}
+
+/* Headings */
+h1 {
+    background-color: rgb(163, 166, 168);
+    font-family: "Montserrat Regular";
+    text-align: center;
+    text-decoration: wavy;
+}
