@@ -215,6 +215,101 @@ body {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
 }
 
+/* Container Section */
+.container {
+    font-size: 20px;
+    font-family: "Inter Regular";
+    background-color: #756767;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 97%;
+    padding: 20px;
+}
+.left-side {
+    flex: 1;
+    max-width: 45%;
+    text-align: left;
+}
+.right-side {
+    flex: 1;
+    max-width: 45%;
+    text-align: right;
+}
+
+/*Specifications text area*/
+.specifications_text_area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Specifications selection area*/
+.specifications_selection_area{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+select{
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.hidden{
+    display: none;
+}
+
+.specifications_selection_area{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-group{
+    margin-bottom: 15px;
+}
+
+label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#previewImage{
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#previewImage.visible{
+    opacity: 1;
+}
+
+/* CSS for preview section */
+.preview {
+    margin-top: 20px;
+  }
+  
+  .preview-image {
+    width: 200px;
+    margin-top: 10px;
+    display: none;
+  }
+  
+
+/* Headings */
+h1 {
+    background-color: rgb(163, 166, 168);
+    font-family: "Montserrat Regular";
+    text-align: center;
+    text-decoration: wavy;
+}
+
 /* Footer */
 .footer {
     background-color: #d9d9d9;
@@ -260,34 +355,4 @@ body {
 }
 .footer-right {
     text-align: right;
-}
-
-/* Container Section */
-.container {
-    font-size: 20px;
-    font-family: "Inter Regular";
-    background-color: #756767;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 97%;
-    padding: 20px;
-}
-.left-side {
-    flex: 1;
-    max-width: 45%;
-    text-align: left;
-}
-.right-side {
-    flex: 1;
-    max-width: 45%;
-    text-align: right;
-}
-
-/* Headings */
-h1 {
-    background-color: rgb(163, 166, 168);
-    font-family: "Montserrat Regular";
-    text-align: center;
-    text-decoration: wavy;
 }

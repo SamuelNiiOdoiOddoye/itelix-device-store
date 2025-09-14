@@ -30,10 +30,10 @@
                  <a href="support.html">Support</a>
              </li>
              <li class="nav-item">
-                 <a href="#"> <img src="icons\search.png" alt="Search"> </a>
+                 <a href="#"> <img src="icons/search.png" alt="Search"> </a>
              </li>
              <li class="nav-item">
-                 <a href="#">  <img src="icons\cart.png" alt="Cart"> </a>
+                 <a href="#">  <img src="icons/cart.png" alt="Cart"> </a>
                  <ul class="dropdown">
                      <li>
                          <a href="#">View Cart</a>
@@ -53,56 +53,94 @@
          </div>
      </div>
     
-     <select name="Iphone models" id="Iphone models">
-        <option value="iphone 11">iphone 11</option>
-        <option value="iphone 11 pro">iphone 11 pro</option>
-        <option value="iphone 11 pro max">iphone 11 pro max</option>
-        <option value="iphone 12">iphone 12</option>
-        <option value="iphone 12 pro">iphone 12 pro</option>
-        <option value="iphone 12 pro max">iphone 12 pro max</option>
-        <option value="iphone 13">iphone 13</option>
-        <option value="iphone 13 pro">iphone 13 pro</option>
-        <option value="iphone 13 pro max">iphone 13 pro max</option>
-        <option value="iphone 14">iphone 14</option>
-        <option value="iphone 14 plus">iphone 14 plus</option>
-        <option value="iphone 14 pro">iphone 14 pro</option>
-        <option value="iphone 14 pro max">iphone 14 pro max</option>
-        <option value="iphone 15">iphone 15</option>
-        <option value="iphone 15 plus">iphone 15 plus</option>
-        <option value="iphone 15 pro">iphone 15 pro</option>
-        <option value="iphone 15 pro max">iphone 15 pro max</option>
-     </select>
+     <!--A div to hold the text before the specification selection-->
+     <div class="specifications_text_area">
+        <h2 class="specification-header">Select your specifications:</h2>
+    </div>
+    <!--A div to hold aditional text centered-->
+    <div class="specifications_text_area">
+        <p>Choose the model, storage size, unlock status and color of your choice.</p>
+    </div>
 
-     <select name="Storage Size" id="Storage Size">
-        <option value="64GB">64GB</option>
-        <option value="128GB">128GB</option>
-        <option value="256GB">256GB</option>
-        <option value="512GB">512GB</option>
-        <option value="1TB">1TB</option>
-     </select>
 
-     <select name="Unlock Status" id="Unlock Status">
-        <option value="Unlocked">Factory Unlocked</option>
-        <option value="Locked">Tempoary Unlocked</option>
-        <option value="Locked">Gevey Unlocked</option>
+     <!--A div to hold the specification selection-->
+     <div class="specifications_selection_area">
+        <form>
+            <div class="form-group">
+                <label for ="iphone_models">Select iPhone Model:</label>
+                <!--This block of code is for the customer to select thier desired model of iphone-->
+                <select name="iphone_models" id="iphone_models" title="Choose your iphone model">
+                    <option value="">--Select a model--</option>
+                    <option value="iphone_11">iphone 11</option>
+                    <option value="iphone_11_pro">iphone 11 pro</option>
+                    <option value="iphone_11_pro_max">iphone 11 pro max</option>
+                    <option value="iphone_12">iphone 12</option>
+                    <option value="iphone_12_mini">iphone 12 mini</option>
+                    <option value="iphone_12_pro">iphone 12 pro</option>
+                    <option value="iphone_12_pro_max">iphone 12 pro max </option>
+                    <option value="iphone_13">iphone 13</option>
+                    <option value="iphone_13_mini">iphone 13 mini</option>
+                    <option value="iphone_13_pro">iphone 13 pro</option>
+                    <option value="iphone_13_pro_max">iphone 13 pro max</option>
+                    <option value="iphone_14">iphone 14</option>
+                    <option value="iphone_14_plus">iphone 14 plus</option>
+                    <option value="iphone_14_pro">iphone 14 pro</option>
+                    <option value="iphone_14_pro_max">iphone 14 pro max</option>
+                    <option value="iphone_15">iphone 15</option>
+                    <option value="iphone_15_plus">iphone 15 plus</option>
+                    <option value="iphone_15_pro">iphone 15 pro</option>
+                    <option value="iphone_15_pro_max">iphone 15 pro max</option>
+                    <option value="iphone_16">iphone 16</option>
+                    <option value="iphone_16_e">iphone 16 e</option>
+                    <option value="iphone_16_plus">iphone 16 plus</option>
+                    <option value="iphone_16_pro">iphone 16 pro</option>
+                    <option value="iphone_16_pro_max">iphone 16 pro max</option>
+                </select>
 
-     </select>
+                <!--This block of code is for the customer to select thier desired storage size initialially all general storage sizes are hidden-->
+                <div class="form-group storage-group hidden">
+                    <label for="storage_size">Choose your Storage Size:</label>
+                        <select name="Storage Size" id="storage_size" title="Choose your storage size" required disabled>
+                            <option value="">--Choose your Storage Size--</option>
+                        </select>
+                </div>
 
-     <select name="Color" id="Color">
-        <option value="Black">Black</option>
-        <option value="White">White</option>
-        <option value="Red">Red</option>
-        <option value="Blue">Blue</option>
-        <option value="Green">Green</option>
-        <option value="Pink">Pink</option>
-        <option value="Purple">Purple</option>
-        <option value="Yellow">Yellow</option>
-        <option value="Gold">Gold</option>
-        <option value="Silver">Silver</option>
-        <option value="Space Grey">Space Grey</option>
-        <option value="Midnight">Midnight</option>
-     </select>
+                <!--This block of code is for the customer to select thier desired unlocked status-->
+                <div class="form-group">
+                    <label for="unlock_status">Select Unlock Status:</label>
+                        <select name="Unlock Status" id="unlock_status" title="Choose your unlock status">
+                            <option value="">--Select Unlocked Status--</option>
+                            <option value="Factory_Unlocked">Factory Unlocked</option>
+                            <option value="Tempoary_Locked">Temporary Unlocked</option>
+                            <option value="Gevey_Locked">Gevey Unlocked</option>
+                        </select> 
+                </div>
+                
 
+                <!--This block of code is for the customer to select thier desired color-->
+                <div class="form-group color-group hidden">
+                    <label for="color">Select Color:</label>
+                        <select name="Color" id="color" title="Choose your color">
+                            <option value="">--Select your desired color--</option>
+                        </select>
+    
+                                        </div>
+                    
+            </div>
+
+            <div id="preview" class="preview">
+                <h3>Preview:</h3>
+                <p id="previewModel">→ Model: </p>
+                <p id="previewStorage">→ Storage: </p>
+                <p id="previewColor">→ Color: </p>
+                <img id="previewImage" src="" alt="Phone Preview" class="preview-image">
+              </div>
+              
+
+        </form>
+     </div>
+     
+     <!--This is the code block for the footer section-->
      <footer class="footer">
 
         <h2 class="footer-header">
@@ -145,6 +183,191 @@
         </div>
     
      </footer>
+
+
+        <script>
+            // JavaScript to iphone model and color selection 
+            const storageOptions = {
+            iphone_11: ["64GB","128GB","256GB"],
+            iphone_11_pro: ["64GB","256GB","512GB"],
+            iphone_11_pro_max: ["64GB","256GB","512GB"],
+            iphone_12: ["64GB","128GB","256GB"],
+            iphone_12_mini: ["64GB","128GB","256GB"],
+            iphone_12_pro: ["128GB","256GB","512GB"],
+            iphone_12_pro_max: ["128GB","256GB","512GB"],
+            iphone_13: ["128GB","256GB","512GB"],
+            iphone_13_mini: ["128GB","256GB","512GB"],
+            iphone_13_pro: ["128GB","256GB","512GB","1TB"],
+            iphone_13_pro_max: ["128GB","256GB","512GB","1TB"],
+            iphone_14: ["128GB","256GB","512GB"],
+            iphone_14_plus: ["128GB","256GB","512GB"],
+            iphone_14_pro: ["128GB","256GB","512GB","1TB"],
+            iphone_14_pro_max: ["128GB","256GB","512GB","1TB"],
+            iphone_15: ["128GB","256GB","512GB"],
+            iphone_15_plus:["128GB","256GB","512GB"],
+            iphone_15_pro: ["128GB","256GB","512GB","1TB"],
+            iphone_15_pro_max:["256GB","512GB","1TB"],
+            iphone_16: ["128GB","256GB","512GB"],
+            iphone_16_plus: ["128GB","256GB","512GB"],
+            iphone_16_e: ["128GB","256GB","512GB"],
+            iphone_16_pro: ["128GB","256GB","512GB","1TB"],
+            iphone_16_pro_max: ["256GB","512GB","1TB"]
+            };
+            
+            const colorOptions = {
+            iphone_11:["Black","White","Green","Yellow","Purple","Product(RED)"],
+            iphone_11_pro: ["Space Gray","Silver","Gold","Midnight Green"],
+            iphone_11_pro_max:["Space Gray","Silver","Gold","Midnight Green​"],
+            iphone_12: ["Black","White","Blue","Green","Purple","Product(RED)"],
+            iphone_12_mini: ["Black","White","Blue","Green","Purple","Product(RED)"],
+            iphone_12_pro: ["Graphite","Silver","Gold","Pacific Blue​"],
+            iphone_12_pro_max: ["Graphite","Silver","Gold","Pacific Blue​"],
+            iphone_13: ["Starlight","Midnight","Blue","Pink","Green","Product(RED)"],
+            iphone_13_mini: ["Starlight","Midnight","Blue","Pink","Green","Product(RED)"],
+            iphone_13_pro:["Graphite","Silver","Gold","Sierra Blue","Alpine Green"],
+            iphone_13_pro_max: ["Graphite","Silver","Gold","Sierra Blue","Alpine Green"],
+            iphone_14: ["Midnight","Starlight","Blue","Purple","Yellow","Product(RED)"],
+            iphone_14_plus: ["Midnight","Starlight","Blue","Purple","Yellow","Product(RED)"],
+            iphone_14_pro: ["Space Black","Silver","Gold","Deep Purple"],
+            iphone_14_pro_max:["Space Black","Silver","Gold","Deep Purple"],
+            iphone_15: ["Black","Blue","Green","Yellow", "Pink"],
+            iphone_15_plus: ["Black","Blue","Green","Yellow","Pink"],
+            iphone_15_pro: ["Black Titanium","White Titanium","Blue Titanium","Natural Titanium"],
+            iphone_15_pro_max: ["Black Titanium","White Titanium","Blue Titanium","Natural Titanium"],
+            iphone_16: ["Ultramarine","Teal","Pink","White","Black"],
+            iphone_16_e: ["White","Black"],
+            iphone_16_plus: ["Ultramarine","Teal","Pink","White","Black"],
+            iphone_16_pro: ["Desert Titanium","Natural Titanium","White Titanium","Black Titanium"],
+            iphone_16_pro_max: ["Desert Titanium","Natural Titanium","White Titanium","Black Titanium"]
+            };
+            
+            // Get DOM elements
+            const iphoneSelect = document.getElementById("iphone_models");
+            const storageSelect = document.getElementById("storage_size");
+            const colorSelect = document.getElementById("color");
+            const storageGroup = document.querySelector(".storage-group");
+            const colorGroup = document.querySelector(".color-group");
+            
+            //Helper function to populate select elements with options
+            function populateSelect(selectElement, options) {
+            options.forEach(option => {
+                const optElement = document.createElement("option");
+                optElement.value = option;
+                optElement.textContent = option;
+                selectElement.appendChild(optElement);
+            });
+            }
+
+            //Helper function to reset a select element
+            function resetSelect(selectElement) {
+                const title = selectElement.getAttribute("title") || "--Select Option";
+                selectElement.innerHTML = `<option value="">${title}</option>`;
+    
+                }
+
+            iphoneSelect.addEventListener("change",function(){
+                const selectedModel = iphoneSelect.value;
+
+                // Reset and hide dependent fields
+                resetSelect(storageSelect);
+                resetSelect(colorSelect);
+                storageGroup.classList.add("hidden");
+                colorGroup.classList.add("hidden");
+                storageSelect.disabled = true;
+                colorSelect.disabled = true;
+
+                previewModel.textContent = `→ Model: ${selectedModel ? selectedModel.replace(/_/g, " ") : "None"}`;
+                previewStorage.textContent = `→ Storage: None`;
+                previewColor.textContent = `→ Color: None`;
+                previewImage.style.display = 'none'; // Hide preview image
+
+                if(selectedModel){
+                    //populate and show storage options if available
+                    if(storageOptions[selectedModel]){
+                        populateSelect(storageSelect, storageOptions[selectedModel]);
+                        storageGroup.classList.remove("hidden");
+                        storageSelect.disabled = false;
+                    }
+
+                    //populate and show color options if available
+                    if(colorOptions[selectedModel]){
+                        populateSelect(colorSelect, colorOptions[selectedModel]);
+                        colorGroup.classList.remove("hidden");
+                        colorSelect.disabled = false;
+                    }
+                }
+
+            }
+            
+            );
+            // Only trigger updatePreview when user picks storage or color
+            storageSelect.addEventListener('change', updatePreview);
+            colorSelect.addEventListener('change', updatePreview);
+
+    
+            const previewModel = document.getElementById('previewModel');
+            const previewStorage = document.getElementById('previewStorage');
+            const previewColor = document.getElementById('previewColor');
+            const previewImage = document.getElementById('previewImage');
+            
+            function updatePreview() {
+                const selectedModel = iphoneSelect.value;
+                const selectedStorage = storageSelect.value;
+                const selectedColor = colorSelect.value;
+            
+                previewModel.textContent = `→ Model: ${selectedModel ? selectedModel.replace(/_/g, " ") : "None"}`;
+                previewStorage.textContent = `→ Storage: ${selectedStorage || "None"}`;
+                previewColor.textContent = `→ Color: ${selectedColor || "None"}`;
+            
+                // Example: Set an image based on model (you can customize this)
+                if (selectedModel&&selectedColor) {
+                    //Format color properly (remove spaces, lowercase) to match your image filenames
+                    const colorFormatted = selectedColor.toLowerCase().replace(/\s+/g, "_").replace(/[()]/g, "");
+                    // Assume you have images named like "iphone_11_black.jpg, iphone_12_pro_max.png etc"
+                    let imagePathPng = `images/iphonepictures/${selectedModel}_${colorFormatted}.png`;
+                    let imagePathJpg = `images/iphonepictures/${selectedModel}_${colorFormatted}.jpg`;
+
+                    //removing any previous animation class
+                    previewImage.classList.remove('visible');
+
+                    // Try setting it, and handle error (onerror fallback to default image)
+                    previewImage.src = imagePathPng; // Try loading PNG first
+                    previewImage.style.display = 'block';
+
+                    previewImage.onload = function(){
+                        previewImage.classList.add('visible'); // Fade in animation when image loads successfully
+                    };
+
+                    //if Png fails try loading JPG
+                    previewImage.onerror = function(){
+                        previewImage.onerror = null; // remove previous error handler to avoid infinite loop
+                        previewImage.src = imagepathJpg;
+                        previewImage.onload = function(){
+                            previewImage.classList.add('visible'); // Fade in animation when image loads successfully
+                        };
+
+                    // if loading fails, set fallback image
+                    previewImage.onerror = function(){
+                        this.onerror = null; // prevent infinite loop if fallback also fails 
+                        this.src = 'images/iphonepictures/default_preview.jpg'; // fallback image
+                        this.onload = function(){
+                            previewImage.classList.add('visible'); // Fade in fallback                     };
+                };
+            }; 
+        };  
+        } else {
+                    previewImage.style.display = 'none';
+                }
+            }
+            
+            //Event listeners to update preview when selections change
+            iphoneSelect.addEventListener('change', updatePreview);
+            storageSelect.addEventListener('change', updatePreview);
+            colorSelect.addEventListener('change', updatePreview);
+            
+
+            </script>
+            
 
     </body>
 </html>
