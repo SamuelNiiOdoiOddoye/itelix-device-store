@@ -236,6 +236,33 @@ body {
     max-width: 45%;
     text-align: right;
 }
+.slideshow-container {
+    max-width: 600px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.slide.active {
+    display: block;
+    animation: fadeEffect 1s;
+}
+.slideimg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+@keyframes fadeEffect {
+    from {opacity: 0.4;}
+    to {opacity: 1;}
+}
 
 /*Specifications text area*/
 .specifications_text_area{

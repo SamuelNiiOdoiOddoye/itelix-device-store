@@ -3,11 +3,14 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iTelix_Home_Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        iTelix_Home_Page
+    </title>
     
     <!-- links to cssfile --> 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -53,31 +56,33 @@
 
     <!--This is the code for the static categories section (no slideshow)-->
     <div class="categories-section">
-        
         <div class="category">
            
-           <a href= "iphone_page.html">
-            <img src="pictures/iphone 11 pics.jpeg" alt="iphone category">
-            <p>iPhones</p>
-           </a>
+            <a href= "iphone_page.html">
+             <div class="slideshow-container" id="iphone-slideshow">
+                <!-- Slides will be injected here by JavaScript -->
+             </div>
+              <p>iPhones</p>
+            </a>
         </div>
 
         <div class="category">
-            <img src="pictures/samsung s23 ultra.jpeg" alt="android phone category">
+            <img src="pictures/android_phone_pictures/samsungs23ultra.jpeg" alt="android phone category">
             <p>Android Phones</p>
         </div>
         
         <div class="category">
-            <img src="pictures/macbook pro pics.jpeg" alt="laptop category">
+            <img src="pictures/laptop_pictures/macbookpropics.jpeg" alt="laptop category">
             <p>Laptops</p>
         </div>
 
         <div class="category">
-            <img src="pictures/ipad pics.jpeg" alt="tablet category">
+            <img src="pictures/ipad_pictures/ipadpics.jpeg" alt="tablet category">
             <p>Tablets</p>
         </div>
 
     </div>
+
 
     <!--This is the code for the footer section-->
     <footer class="footer">
@@ -93,7 +98,7 @@
                 <p class="footer-header">Contact:</p>
                 <p>
                     Phone : +233 242 100 866 <br>
-                    E-mail : addoyesamuel@gmail.com
+                    E-mail : samuel.oddoye@icloud.com
                 </p>
             </div>
 
@@ -127,9 +132,8 @@
                 }, 300);
             });
         });
-        
     </script>
 
-
+<script src="slideshow.js"></script>
 </body>
 </html>
