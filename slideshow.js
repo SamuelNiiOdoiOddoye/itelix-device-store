@@ -1,58 +1,75 @@
-// Array of image paths (auto-generated or manually updated)
-const imageFolder = 'pictures/iphone_pictures/';
-const imageFiles = [
-  'iphone11pics.JPEG',
-  'iphone13promaxpics.JPEG',
-  'iphone15.JPEG',
-  'iphone15promax.JPEG',
-  'iphone16promax.JPEG',
+// Create a Slideshow class to manage each slideshow independently
+class Slideshow {
+    constructor(container) {
+        this.container = container;
+        this.slides = container.querySelectorAll('.slide');
+        this.dots = container.querySelectorAll('.dot');
+        this.currentIndex = 0;
+        this.interval = null;
+        this.init();
+    }
 
-];
+    init() {
+        // Show first slide
+        this.showSlide(this.currentIndex);
+        
+        // Start auto-advance
+        this.start();
+        
+        // Add hover events to pause on hover
+        this.container.addEventListener('mouseenter', () => this.stop());
+        this.container.addEventListener('mouseleave', () => this.start());
+        
+        // Add click events to dots
+        this.dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                this.showSlide(index);
+            });
+        });
+    }
 
-// Generate slides dynamically
-const slideshow = document.getElementById('iphone-slideshow');
-slideshow.innerHTML = ''; // Clear old content
+    showSlide(index) {
+        // Hide all slides in THIS slideshow only
+        this.slides.forEach(slide => {
+            slide.classList.remove('active');
+        });
+        
+        // Remove active class from all dots in THIS slideshow only
+        this.dots.forEach(dot => {
+            dot.classList.remove('active');
+        });
+        
+        // Show current slide and dot in THIS slideshow only
+        this.slides[index].classList.add('active');
+        this.dots[index].classList.add('active');
+        this.currentIndex = index;
+    }
 
-// Create slides
-imageFiles.forEach((filename, idx) => {
-  const slide = document.createElement('div');
-  slide.className = 'slide';
-  if (idx === 0) slide.classList.add('active');
-  const img = document.createElement('img');
-  img.src = imageFolder + filename;
-  img.className = 'slideimg';
-  img.alt = 'iPhone'+(idx+11); // Better alt text
-  slide.appendChild(img);
-  slideshow.appendChild(slide);
-});
+    nextSlide() {
+        const nextIndex = (this.currentIndex + 1) % this.slides.length;
+        this.showSlide(nextIndex);
+    }
 
-let currentSlide = 0;
-const slides = slideshow.querySelectorAll('.slide');
+    start() {
+        this.stop(); // Clear any existing interval
+        this.interval = setInterval(() => {
+            this.nextSlide();
+        }, 3000);
+    }
 
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.toggle('active', i === index);
-  });
+    stop() {
+        if (this.interval) {
+            clearInterval(this.interval);
+            this.interval = null;
+        }
+    }
 }
 
-// Auto-advance every 3 seconds
-setInterval(() => {
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
-}, 3000);
-
-// -- Add navigation, dots, and auto-play logic here (see previous code) --
-
-// Cart dropdown functionality
-document.addEventListener("DOMContentLoaded", function () {
-    const cartIcon = document.getElementById("cart-icon");
-    const dropdownMenu = document.querySelector(".dropdown-menu");
-            
-        cartIcon.addEventListener("mouseenter", function () {
-            dropdownMenu.style.display = "block";
-        });
-
-        cartIcon.addEventListener("mouseleave", function () {
-            dropdownMenu.style.display = "none";
-        });
+// Initialize all slideshows when the page loads
+document.addEventListener('DOMContentLoaded', function() {
+    const slideshowContainers = document.querySelectorAll('.slideshow-container');
+    
+    slideshowContainers.forEach(container => {
+        new Slideshow(container);
+    });
 });
