@@ -166,8 +166,10 @@ body {
     align-items: stretch;
     gap: 20px;
     background-color: #756767;
-    padding: 20px;
+    padding: 40px 20px; /* Increased padding for better spacing */
     flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box; /* Add this */
 }
 .category {
     text-align: center;
@@ -456,5 +458,62 @@ body {
     .categories-section {
         max-width: 1200px;
         margin: 0 auto;
+    }
+}
+
+/* === MISSING RESPONSIVE RULES === */
+
+/* Desktop (992px and above) - FORCE 4 CATEGORIES IN ONE ROW */
+@media (min-width: 992px) {
+    .categories-section {
+        justify-content: center;
+        flex-wrap: nowrap; /* This prevents wrapping */
+    }
+    .category {
+        flex: 0 0 auto; /* Don't grow or shrink */
+        width: 280px;
+    }
+}
+
+/* Large screens (1200px and above) - ENSURE 4 IN A ROW */
+@media (min-width: 1200px) {
+    .categories-section {
+        max-width: 1300px;
+        margin: 0 auto;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+}
+
+/* Tablets (768px to 991px) - 2 CATEGORIES PER ROW */
+@media (min-width: 768px) and (max-width: 991px) {
+    .categories-section {
+        justify-content: center;
+    }
+    .category {
+        width: calc(50% - 30px);
+        min-width: 250px;
+        margin: 15px;
+    }
+}
+
+/* Small tablets (481px to 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+    .categories-section {
+        justify-content: center;
+    }
+    .category {
+        width: calc(50% - 20px);
+        margin: 10px;
+    }
+}
+
+/* Mobile Phones (480px and below) - CENTERED */
+@media (max-width: 480px) {
+    .categories-section {
+        align-items: center; /* This centers categories on mobile */
+    }
+    .category {
+        margin: 0 auto; /* This centers each category */
     }
 }
