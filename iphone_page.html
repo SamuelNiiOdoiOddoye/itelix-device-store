@@ -95,6 +95,10 @@
                     <option value="iphone_16_plus">iphone 16 plus</option>
                     <option value="iphone_16_pro">iphone 16 pro</option>
                     <option value="iphone_16_pro_max">iphone 16 pro max</option>
+                    <option value="iphone_17">iphone 17</option>
+                    <option value="iphone_17_air">iphone 17 air</option>
+                    <option value="iphone_17_pro">iphone 17 pro</option>
+                    <option value="iphone_17_pro_max">iphone 17 pro max</option>
                 </select>
 
                 <!--This block of code is for the customer to select thier desired storage size initialially all general storage sizes are hidden-->
@@ -128,6 +132,7 @@
                     
             </div>
 
+            <!--This code is for the preview of the specifications the user selects-->
             <div id="preview" class="preview">
                 <h3>Preview:</h3>
                 <p id="previewModel">→ Model: </p>
@@ -211,7 +216,11 @@
             iphone_16_plus: ["128GB","256GB","512GB"],
             iphone_16_e: ["128GB","256GB","512GB"],
             iphone_16_pro: ["128GB","256GB","512GB","1TB"],
-            iphone_16_pro_max: ["256GB","512GB","1TB"]
+            iphone_16_pro_max: ["256GB","512GB","1TB"],
+            iphone_17: ["256GB","512GB"],
+            iphone_17_Air: ["256GB","512GB","1TB"],
+            iphone_17_pro: ["256GB","512GB","1TB"],
+            iphone_17_pro_max: ["512GB","1TB","2TB"]
             };
             
             const colorOptions = {
@@ -238,7 +247,11 @@
             iphone_16_e: ["White","Black"],
             iphone_16_plus: ["Ultramarine","Teal","Pink","White","Black"],
             iphone_16_pro: ["Desert Titanium","Natural Titanium","White Titanium","Black Titanium"],
-            iphone_16_pro_max: ["Desert Titanium","Natural Titanium","White Titanium","Black Titanium"]
+            iphone_16_pro_max: ["Desert Titanium","Natural Titanium","White Titanium","Black Titanium"],
+            iphone_17: ["Lavender","Mist Blue","Black","White","Sage"],
+            iphone_17_Air: ["Sky Blue","Light Gold","Cloud White","Space Black"],
+            iphone_17_pro: ["Silver","Deep Blue","Cosmic Orange"],
+            iphone_17_pro_max: ["Silver","Deep Blue","Cosmic Orange"]
             };
             
             // Get DOM elements
