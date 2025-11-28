@@ -143,7 +143,10 @@
             </div>
             <div class="footer-right">
                 <p class="footer-header">Follow Us:</p>
-                <p><a href="#">Whatsapp</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a> | <a href="#">Snapchat</a></p>
+                <p><a href="./pictures/contact_me_whatsapp">Whatsapp</a> | <a href="https://x.com/oddoye_samuel">Twitter</a> |
+                    <a href="https://www.instagram.com/nii.odoi.oddoye/">Instagram</a> |
+                    <a href="https://snapchat.com/t/Coo4vIsE">Snapchat</a>
+                </p>
             </div>
         </div>
     </footer>
