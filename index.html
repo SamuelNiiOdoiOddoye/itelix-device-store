@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>iTelix_Home_Page</title>
-    
-    <!-- links to cssfile --> 
+
+    <!-- links to cssfile -->
     <link rel="stylesheet" href="./style.css">
 
     <!--Bootstrap-->
@@ -15,7 +16,7 @@
 <body>
     <!--This is the code for the navigation bar-->
     <nav class="navbar">
-       <ul class="nav-links">
+        <ul class="nav-links">
             <li class="nav-item">
                 <a href="./index.html"><img src="./icons/home.png" alt="Go To Home Page"></a>
             </li>
@@ -59,9 +60,9 @@
             <div class="scrolling-text">
                 •🔥• Featured Products •🔥• Featured Products •🔥• Featured Products •🔥•Featured Products •🔥•
             </div>
-        </div>  
-        
-        <!--This is the code for the slideshow in the featured products category on the website-->   
+        </div>
+
+        <!--This is the code for the slideshow in the featured products category on the website-->
         <div class="featured-products-category">
             <!--This is the code for the slideshow-->
             <div class="slideshow-container featured-slideshow">
@@ -316,7 +317,7 @@
                         </a>
                     </div>
                 </div>
-            
+
                 <!--Slideshow Dots-->
                 <div class="slideshow-dots">
                     <span class="dot active"></span>
@@ -333,7 +334,7 @@
                     <span class="dot"></span>
                 </div>
             </div>
-        </div>    
+        </div>
     </div>
 
     <!--This is the category section-->
@@ -374,10 +375,10 @@
                 <p>iPhones</p>
             </a>
         </div>
- 
+
         <!--android category-->
         <div class="category">
-            <a href="#">
+            <a href="./android_phones.php">
                 <div class="slideshow-container">
                     <div class="slide active">
                         <img src="./pictures/android_phone_pictures/samsungs23ultra.jpeg" alt="samsung s23 ultra">
@@ -391,7 +392,7 @@
                     <div class="slide">
                         <img src="./pictures/android_phone_pictures/samsungflip3.jpeg" alt="samsung flip 3">
                     </div>
-                    
+
                     <!--Slideshow dots-->
                     <div class="slideshow-dots">
                         <span class="dot active"></span>
@@ -399,11 +400,11 @@
                         <span class="dot"></span>
                         <span class="dot"></span>
                     </div>
-                </div>    
+                </div>
                 <p>Android Phones</p>
             </a>
         </div>
-        
+
         <!--laptop category-->
         <div class="category">
             <a href="#">
@@ -420,7 +421,7 @@
                     <div class="slide">
                         <img src="./pictures/laptop_pictures/ROGlaptop.jpeg" alt="ROG laptop">
                     </div>
-        
+
                     <!--slideshow dots-->
                     <div class="slideshow-dots">
                         <span class="dot active"></span>
@@ -428,7 +429,7 @@
                         <span class="dot"></span>
                         <span class="dot"></span>
                     </div>
-                </div>    
+                </div>
                 <p>Laptops</p>
             </a>
         </div>
@@ -449,7 +450,7 @@
                     <div class="slide">
                         <img src="./pictures/android_tablet/s9ultratablet.jpeg" alt="s9 ultra tablet">
                     </div>
-                
+
                     <!--Slideshow Dots-->
                     <div class="slideshow-dots">
                         <span class="dot active"></span>
@@ -462,6 +463,12 @@
             </a>
         </div>
     </div>
+
+    <!--Details Modal-->
+    <?php 
+    
+    include 'details-modal.php'; 
+    ?>
 
     <!--This is the code for the footer section-->
     <footer class="footer">
@@ -484,7 +491,7 @@
             <div class="footer-right">
                 <p class="footer-header">Follow Us:</p>
                 <p>
-                    <a href="#">Whatsapp</a> | <a href="#">Twitter</a> | 
+                    <a href="#">Whatsapp</a> | <a href="#">Twitter</a> |
                     <a href="#">Instagram</a> | <a href="#">Snapchat</a>
                 </p>
             </div>
@@ -493,4 +500,5 @@
 
     <script src="./slideshow.js"></script>
 </body>
+
 </html>

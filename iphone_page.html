@@ -1,386 +1,793 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>
-            iphone Page
-        </title>
 
-         <!-- links to cssfile --> 
-        <link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    </head>
-    <body>
+<body>
 
-            <!--This is the code for the navigation bar-->
+    <!-- Navigation Bar -->
     <nav class="navbar">
-        <ul class = "nav-links">
-             <li class="nav-item">
-                 <a href="index.html"><img src="icons/home.png" alt="Home" ></a>
-             </li>
+        <ul class="nav-links">
+            <li class="nav-item"><a href="index.html"><img src="icons/home.png" alt="Home"></a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+            <li><a href="accessories.html">Accessories</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li class="nav-item"><a href="#"><img src="icons/search.png" alt="Search"></a></li>
+            <li class="nav-item">
+                <a href="#"><img src="icons/cart.png" alt="Cart"></a>
+                <ul class="dropdown">
+                    <li><a href="#">View Cart</a></li>
+                    <li><a href="#">Checkout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 
-             <li>
-                 <a href="contact_us.html">Contact Us</a>
-             </li>
-             <li>
-                 <a href="accessories.html">Accessories</a>
-             </li>
-             <li>
-                 <a href="support.html">Support</a>
-             </li>
-             <li class="nav-item">
-                 <a href="#"> <img src="icons/search.png" alt="Search"> </a>
-             </li>
-             <li class="nav-item">
-                 <a href="#">  <img src="icons/cart.png" alt="Cart"> </a>
-                 <ul class="dropdown">
-                     <li>
-                         <a href="#">View Cart</a>
-                     </li>
-                     <li>
-                         <a href="#">Checkout</a>
-                     </li>
-                 </ul>
-             </li>
-         </ul>
-     </nav>
-
-     <!--Select the iphone of your choice-->
-     <div class="hero-section">
-        <div class="hero-section-header">
-            Select the specifications of your choice:
-         </div>
-     </div>
-    
-     <!--A div to hold the text before the specification selection-->
-     <div class="specifications_text_area">
-        <h2 class="specification-header">Select your specifications:</h2>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-section-header">Select the specifications of your choice:</div>
     </div>
-    <!--A div to hold aditional text centered-->
+
+    <!-- Text Area -->
     <div class="specifications_text_area">
-        <p>Choose the model, storage size, unlock status and color of your choice.</p>
+        <h2 class="specification-header">Select your specifications:</h2>
+        <p>Choose the model, storage size, unlock status, color, and SIM type of your choice.</p>
     </div>
 
-
-     <!--A div to hold the specification selection-->
-     <div class="specifications_selection_area">
+    <!-- Selection Area -->
+    <div class="iphone_model_selection_area">
         <form>
+
+            <!-- iPhone Model -->
             <div class="form-group">
-                <label for ="iphone_models">Select iPhone Model:</label>
-                <!--This block of code is for the customer to select thier desired model of iphone-->
-                <select name="iphone_models" id="iphone_models" title="Choose your iphone model">
+                <label for="iphone_models">Select iPhone Model:</label>
+                <select id="iphone_models" title="Choose your iPhone model">
                     <option value="">--Select a model--</option>
-                    <option value="iphone_11">iphone 11</option>
-                    <option value="iphone_11_pro">iphone 11 pro</option>
-                    <option value="iphone_11_pro_max">iphone 11 pro max</option>
-                    <option value="iphone_12">iphone 12</option>
-                    <option value="iphone_12_mini">iphone 12 mini</option>
-                    <option value="iphone_12_pro">iphone 12 pro</option>
-                    <option value="iphone_12_pro_max">iphone 12 pro max </option>
-                    <option value="iphone_13">iphone 13</option>
-                    <option value="iphone_13_mini">iphone 13 mini</option>
-                    <option value="iphone_13_pro">iphone 13 pro</option>
-                    <option value="iphone_13_pro_max">iphone 13 pro max</option>
-                    <option value="iphone_14">iphone 14</option>
-                    <option value="iphone_14_plus">iphone 14 plus</option>
-                    <option value="iphone_14_pro">iphone 14 pro</option>
-                    <option value="iphone_14_pro_max">iphone 14 pro max</option>
-                    <option value="iphone_15">iphone 15</option>
-                    <option value="iphone_15_plus">iphone 15 plus</option>
-                    <option value="iphone_15_pro">iphone 15 pro</option>
-                    <option value="iphone_15_pro_max">iphone 15 pro max</option>
-                    <option value="iphone_16">iphone 16</option>
-                    <option value="iphone_16_e">iphone 16 e</option>
-                    <option value="iphone_16_plus">iphone 16 plus</option>
-                    <option value="iphone_16_pro">iphone 16 pro</option>
-                    <option value="iphone_16_pro_max">iphone 16 pro max</option>
-                    <option value="iphone_17">iphone 17</option>
-                    <option value="iphone_17_air">iphone 17 air</option>
-                    <option value="iphone_17_pro">iphone 17 pro</option>
-                    <option value="iphone_17_pro_max">iphone 17 pro max</option>
                 </select>
-
-                <!--This block of code is for the customer to select thier desired storage size initialially all general storage sizes are hidden-->
-                <div class="form-group storage-group hidden">
-                    <label for="storage_size">Choose your Storage Size:</label>
-                        <select name="Storage Size" id="storage_size" title="Choose your storage size" required disabled>
-                            <option value="">--Choose your Storage Size--</option>
-                        </select>
-                </div>
-
-                <!--This block of code is for the customer to select thier desired unlocked status-->
-                <div class="form-group">
-                    <label for="unlock_status">Select Unlock Status:</label>
-                        <select name="Unlock Status" id="unlock_status" title="Choose your unlock status">
-                            <option value="">--Select Unlocked Status--</option>
-                            <option value="Factory_Unlocked">Factory Unlocked</option>
-                            <option value="Tempoary_Locked">Temporary Unlocked</option>
-                            <option value="Gevey_Locked">Gevey Unlocked</option>
-                        </select> 
-                </div>
-                
-
-                <!--This block of code is for the customer to select thier desired color-->
-                <div class="form-group color-group hidden">
-                    <label for="color">Select Color:</label>
-                        <select name="Color" id="color" title="Choose your color">
-                            <option value="">--Select your desired color--</option>
-                        </select>
-    
-                                        </div>
-                    
             </div>
 
-            <!--This code is for the preview of the specifications the user selects-->
+            <!-- Storage -->
+            <div class="form-group storage-group hidden">
+                <label for="storage_size">Choose Storage Size:</label>
+                <select id="storage_size" disabled>
+                    <option value="">--Choose your Storage Size--</option>
+                </select>
+            </div>
+
+            <!-- Color -->
+            <div class="form-group color-group hidden">
+                <label for="color">Select Color:</label>
+                <select id="color" disabled>
+                    <option value="">--Select your desired Color--</option>
+                </select>
+            </div>
+
+            <!-- Unlock Status -->
+            <div class="form-group">
+                <label for="unlock_status">Select Unlock Status:</label>
+                <select id="unlock_status">
+                    <option value="">--Select Unlock Status--</option>
+                    <option value="Factory Unlocked">Factory Unlocked</option>
+                    <option value="Temporary Unlocked">Temporary Unlocked</option>
+                    <option value="Gevey Unlocked">Gevey Unlocked</option>
+                </select>
+            </div>
+
+            <!-- SIM Type -->
+            <div class="form-group sim-group hidden">
+                <label for="sim_type">Select SIM Type:</label>
+                <select id="sim_type" disabled>
+                    <option value="">--Select SIM Type--</option>
+                    <option value="eSIM Only">eSIM Only</option>
+                    <option value="Physical SIM Only">Physical SIM Only</option>
+                    <option value="Dual SIM (eSIM + Physical)">Both (eSIM + Physical)</option>
+                </select>
+            </div>
+
+            <!-- Preview -->
             <div id="preview" class="preview">
                 <h3>Preview:</h3>
                 <p id="previewModel">→ Model: </p>
                 <p id="previewStorage">→ Storage: </p>
                 <p id="previewColor">→ Color: </p>
-                <img id="previewImage" src="" alt="Phone Preview" class="preview-image">
-              </div>
-              
+                <p id="previewUnlockStatus">→ Unlock Status: </p>
+                <p id="previewSIM">→ SIM Type: </p>
 
+                <div id="previewFeatures" class="preview-features">
+                    <h4>Device Features:</h4>
+                    <ul id="featuresList"></ul>
+                </div>
+
+                <img id="previewImage" src="" alt="iPhone Preview" class="preview-image">
+            </div>
         </form>
-     </div>
-     
-     <!--This is the code block for the footer section-->
-     <footer class="footer">
+    </div>
 
-        <h2 class="footer-header">
-            Your Trusted Tech Marketplace
-        </h2>
-    
+    <!-- Footer -->
+    <footer class="footer">
+        <h2 class="footer-header">Your Trusted Tech Marketplace</h2>
         <div class="footer-content">
-    
             <div class="footer-left">
-                <p class="footer-header">
-                    About us
-                </p>
-                <p>
-                    <a href="#">
-                        Terms & Conditions
-                    </a>
-                </p>
+                <p class="footer-header">About us</p>
+                <p><a href="#">Terms & Conditions</a></p>
             </div>
-    
             <div class="footer-center">
-                <p class="footer-header">
-                    Contact:
-                </p>
-                <p>
-                    Phone : +233 242 100 866 <br>
-                    E-mail : addoyesamuel@gmail.com
-                </p>
+                <p class="footer-header">Contact:</p>
+                <p>Phone: +233 242 100 866<br>E-mail: addoyesamuel@gmail.com</p>
             </div>
-    
             <div class="footer-right">
-                <p class="footer-header">
-                    Follow Us:
-                </p>
-                <p>
-                    <a href="#">Whatsapp</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a> | <a href="#">Snapchat</a>
-                </p>
-    
+                <p class="footer-header">Follow Us:</p>
+                <p><a href="#">Whatsapp</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a> | <a
+                        href="#">Snapchat</a></p>
             </div>
-    
         </div>
-    
-     </footer>
+    </footer>
 
+    <!-- Script -->
+    <script>
 
-        <script>
-            // JavaScript to iphone model and color selection 
-            const storageOptions = {
-            iphone_11: ["64GB","128GB","256GB"],
-            iphone_11_pro: ["64GB","256GB","512GB"],
-            iphone_11_pro_max: ["64GB","256GB","512GB"],
-            iphone_12: ["64GB","128GB","256GB"],
-            iphone_12_mini: ["64GB","128GB","256GB"],
-            iphone_12_pro: ["128GB","256GB","512GB"],
-            iphone_12_pro_max: ["128GB","256GB","512GB"],
-            iphone_13: ["128GB","256GB","512GB"],
-            iphone_13_mini: ["128GB","256GB","512GB"],
-            iphone_13_pro: ["128GB","256GB","512GB","1TB"],
-            iphone_13_pro_max: ["128GB","256GB","512GB","1TB"],
-            iphone_14: ["128GB","256GB","512GB"],
-            iphone_14_plus: ["128GB","256GB","512GB"],
-            iphone_14_pro: ["128GB","256GB","512GB","1TB"],
-            iphone_14_pro_max: ["128GB","256GB","512GB","1TB"],
-            iphone_15: ["128GB","256GB","512GB"],
-            iphone_15_plus:["128GB","256GB","512GB"],
-            iphone_15_pro: ["128GB","256GB","512GB","1TB"],
-            iphone_15_pro_max:["256GB","512GB","1TB"],
-            iphone_16: ["128GB","256GB","512GB"],
-            iphone_16_plus: ["128GB","256GB","512GB"],
-            iphone_16_e: ["128GB","256GB","512GB"],
-            iphone_16_pro: ["128GB","256GB","512GB","1TB"],
-            iphone_16_pro_max: ["256GB","512GB","1TB"],
-            iphone_17: ["256GB","512GB"],
-            iphone_17_Air: ["256GB","512GB","1TB"],
-            iphone_17_pro: ["256GB","512GB","1TB"],
-            iphone_17_pro_max: ["512GB","1TB","2TB"]
-            };
-            
-            const colorOptions = {
-            iphone_11:["Black","White","Green","Yellow","Purple","Product(RED)"],
-            iphone_11_pro: ["Space Gray","Silver","Gold","Midnight Green"],
-            iphone_11_pro_max:["Space Gray","Silver","Gold","Midnight Green​"],
-            iphone_12: ["Black","White","Blue","Green","Purple","Product(RED)"],
-            iphone_12_mini: ["Black","White","Blue","Green","Purple","Product(RED)"],
-            iphone_12_pro: ["Graphite","Silver","Gold","Pacific Blue​"],
-            iphone_12_pro_max: ["Graphite","Silver","Gold","Pacific Blue​"],
-            iphone_13: ["Starlight","Midnight","Blue","Pink","Green","Product(RED)"],
-            iphone_13_mini: ["Starlight","Midnight","Blue","Pink","Green","Product(RED)"],
-            iphone_13_pro:["Graphite","Silver","Gold","Sierra Blue","Alpine Green"],
-            iphone_13_pro_max: ["Graphite","Silver","Gold","Sierra Blue","Alpine Green"],
-            iphone_14: ["Midnight","Starlight","Blue","Purple","Yellow","Product(RED)"],
-            iphone_14_plus: ["Midnight","Starlight","Blue","Purple","Yellow","Product(RED)"],
-            iphone_14_pro: ["Space Black","Silver","Gold","Deep Purple"],
-            iphone_14_pro_max:["Space Black","Silver","Gold","Deep Purple"],
-            iphone_15: ["Black","Blue","Green","Yellow", "Pink"],
-            iphone_15_plus: ["Black","Blue","Green","Yellow","Pink"],
-            iphone_15_pro: ["Black Titanium","White Titanium","Blue Titanium","Natural Titanium"],
-            iphone_15_pro_max: ["Black Titanium","White Titanium","Blue Titanium","Natural Titanium"],
-            iphone_16: ["Ultramarine","Teal","Pink","White","Black"],
-            iphone_16_e: ["White","Black"],
-            iphone_16_plus: ["Ultramarine","Teal","Pink","White","Black"],
-            iphone_16_pro: ["Desert Titanium","Natural Titanium","White Titanium","Black Titanium"],
-            iphone_16_pro_max: ["Desert Titanium","Natural Titanium","White Titanium","Black Titanium"],
-            iphone_17: ["Lavender","Mist Blue","Black","White","Sage"],
-            iphone_17_Air: ["Sky Blue","Light Gold","Cloud White","Space Black"],
-            iphone_17_pro: ["Silver","Deep Blue","Cosmic Orange"],
-            iphone_17_pro_max: ["Silver","Deep Blue","Cosmic Orange"]
-            };
-            
-            // Get DOM elements
-            const iphoneSelect = document.getElementById("iphone_models");
-            const storageSelect = document.getElementById("storage_size");
-            const colorSelect = document.getElementById("color");
-            const storageGroup = document.querySelector(".storage-group");
-            const colorGroup = document.querySelector(".color-group");
-            
-            //Helper function to populate select elements with options
-            function populateSelect(selectElement, options) {
-            options.forEach(option => {
-                const optElement = document.createElement("option");
-                optElement.value = option;
-                optElement.textContent = option;
-                selectElement.appendChild(optElement);
+        // ===============================================
+        // iPhone Device Data
+        // ===============================================
+        const deviceData = {
+            // ---------------- iPhone 11 Series ----------------
+            iphone_11: {
+                name: "iPhone 11",
+                storages: ["64GB", "128GB", "256GB"],
+                colors: ["Black", "White", "Green", "Yellow", "Purple", "Product(RED)"],
+                simOptions: ["eSIM Only", "Physical SIM Only", "Dual SIM (eSIM + Physical)"],
+                features: {
+                    Display: ["6.1” Liquid Retina HD"],
+                    Resolution: ["1792 x 828"],
+                    Chipset: ["A13 Bionic"],
+                    RearCamera: ["12MP + 12MP"],
+                    FrontCamera: ["12MP"],
+                    Battery: ["3110mAh"],
+                    Charging: ["18W Wired", "7.5W Wireless"],
+                    OS: ["iOS 17"],
+                    Build: ["Aluminum + Glass"],
+                    Special: ["Face ID", "Spatial Audio"]
+                },
+                imageFolder: "images/iphonepictures"
+            },
+
+            iphone_11_pro: {
+                name: "iPhone 11 Pro",
+                storages: ["64GB", "256GB", "512GB"],
+                colors: ["Space Gray", "Silver", "Gold", "Midnight Green"],
+                simOptions: ["eSIM Only", "Physical SIM Only", "Dual SIM (eSIM + Physical)"],
+                features: {
+                    Display: ["5.8” Super Retina XDR"],
+                    Resolution: ["2436 x 1125"],
+                    Chipset: ["A13 Bionic"],
+                    RearCamera: ["12MP + 12MP + 12MP"],
+                    FrontCamera: ["12MP"],
+                    Battery: ["3046mAh"],
+                    Charging: ["18W Wired", "7.5W Wireless"],
+                    OS: ["iOS 17"],
+                    Build: ["Stainless Steel + Glass"],
+                    Special: ["Face ID", "HDR Display"]
+                },
+                imageFolder: "images/iphonepictures"
+            },
+
+            iphone_11_pro_max: {
+                name: "iPhone 11 Pro Max",
+                storages: ["64GB", "256GB", "512GB"],
+                colors: ["Space Gray", "Silver", "Gold", "Midnight Green"],
+                simOptions: ["eSIM Only", "Physical SIM Only", "Dual SIM (eSIM + Physical)"],
+                features: {
+                    Display: ["6.5” Super Retina XDR"],
+                    Resolution: ["2688 x 1242"],
+                    Chipset: ["A13 Bionic"],
+                    RearCamera: ["12MP + 12MP + 12MP"],
+                    FrontCamera: ["12MP"],
+                    Battery: ["3969mAh"],
+                    Charging: ["18W Wired", "7.5W Wireless"],
+                    OS: ["iOS 17"],
+                    Build: ["Stainless Steel + Glass"],
+                    Special: ["Face ID", "HDR Display"]
+                },
+                imageFolder: "images/iphonepictures"
+            },
+
+            // ---------------- iPhone 12 Series ----------------
+            iphone_12: {
+                name: "iPhone 12",
+                storages: ["64GB", "128GB", "256GB"],
+                colors: ["Black", "White", "Red", "Green", "Blue", "Purple"],
+                simOptions: ["eSIM Only", "Physical SIM Only", "Dual SIM (eSIM + Physical)"],
+                features: {
+                    Display: ["6.1” Super Retina XDR"],
+                    Resolution: ["2532 x 1170"],
+                    Chipset: ["A14 Bionic"],
+                    RearCamera: ["12MP + 12MP"],
+                    FrontCamera: ["12MP"],
+                    Battery: ["2815mAh"],
+                    Charging: ["20W Wired", "15W MagSafe"],
+                    OS: ["iOS 17"],
+                    Build: ["Aluminum + Glass"],
+                    Special: ["MagSafe", "5G", "HDR Display"]
+                },
+                imageFolder: "images/iphonepictures"
+            },
+
+            iphone_12_mini: {
+                name: "iPhone 12 Mini",
+                storages: ["64GB", "128GB", "256GB"],
+                colors: ["Black", "White", "Red", "Green", "Blue", "Purple"],
+                simOptions: ["eSIM Only", "Physical SIM Only", "Dual SIM (eSIM + Physical)"],
+                features: {
+                    Display: ["5.4” Super Retina XDR"],
+                    Resolution: ["2340 x 1080"],
+                    Chipset: ["A14 Bionic"],
+                    RearCamera: ["12MP + 12MP"],
+                    FrontCamera: ["12MP"],
+                    Battery: ["2227mAh"],
+                    Charging: ["20W Wired", "15W MagSafe"],
+                    OS: ["iOS 17"],
+                    Build: ["Aluminum + Glass"],
+                    Special: ["MagSafe", "5G", "HDR Display"]
+                },
+                imageFolder: "images/iphonepictures"
+            },
+
+            iphone_12_pro: {
+                name: "iPhone 12 Pro",
+                storages: ["128GB", "256GB", "512GB"],
+                colors: ["Silver", "Graphite", "Gold", "Pacific Blue"],
+                simOptions: ["eSIM Only", "Physical SIM Only", "Dual SIM (eSIM + Physical)"],
+                features: {
+                    Display: ["6.1” Super Retina XDR"],
+                    Resolution: ["2532 x 1170"],
+                    Chipset: ["A14 Bionic"],
+                    RearCamera: ["12MP + 12MP + 12MP"],
+                    FrontCamera: ["12MP"],
+                    Battery: ["2815mAh"],
+                    Charging: ["20W Wired", "15W MagSafe"],
+                    OS: ["iOS 17"],
+                    Build: ["Stainless Steel + Glass"],
+                    Special: ["LiDAR Scanner", "ProRAW", "5G", "HDR Display"]
+                },
+                imageFolder: "images/iphonepictures"
+            },
+
+            iphone_12_pro_max: {
+                name: "iPhone 12 Pro Max",
+                storages: ["128GB", "256GB", "512GB"],
+                colors: ["Silver", "Graphite", "Gold", "Pacific Blue"],
+                simOptions: ["eSIM Only", "Physical SIM Only", "Dual SIM (eSIM + Physical)"],
+                features: {
+                    Display: ["6.7” Super Retina XDR"],
+                    Resolution: ["2778 x 1284"],
+                    Chipset: ["A14 Bionic"],
+                    RearCamera: ["12MP + 12MP + 12MP"],
+                    FrontCamera: ["12MP"],
+                    Battery: ["3687mAh"],
+                    Charging: ["20W Wired", "15W MagSafe"],
+                    OS: ["iOS 17"],
+                    Build: ["Stainless Steel + Glass"],
+                    Special: ["LiDAR Scanner", "ProRAW", "5G", "HDR Display"]
+                },
+                imageFolder: "images/iphonepictures"
+            },
+
+            // ---------------- iPhone 13 Series ----------------
+            iphone_13: {
+                name: "iPhone 13",
+                storages: ["128GB", "256GB", "512GB"],
+                colors: ["Red", "Starlight", "Midnight", "Blue", "Pink", "Green"],
+                simOptions: ["eSIM Only", "Physical SIM Only", "Dual SIM (eSIM + Physical)"],
+                features: {
+                    Display: ["6.1” Super Retina XDR"],
+                    Resolution: ["2532 x 1170"],
+                    Chipset: ["A15 Bionic"],
+                    RearCamera: ["12MP + 12MP"],
+                    FrontCamera: ["12MP"],
+                    Battery: ["3240mAh"],
+                    Charging: ["20W Wired", "15W MagSafe"],
+                    OS: ["iOS 17"],
+                    Build: ["Aluminum + Glass"],
+                    Special: ["Cinematic Mode", "5G", "HDR Display"]
+                },
+                imageFolder: "images/iphonepictures"
+            },
+
+            iphone_13_mini: {
+                name: "iPhone 13 Mini",
+                storages: ["128GB", "256GB", "512GB"],
+                colors: ["Red", "Starlight", "Midnight", "Blue", "Pink", "Green"],
+                simOptions: ["eSIM Only", "Physical SIM Only", "Dual SIM (eSIM + Physical)"],
+                features: {
+                    Display: ["5.4” Super Retina XDR"],
+                    Resolution: ["2340 x 1080"],
+                    Chipset: ["A15 Bionic"],
+                    RearCamera: ["12MP + 12MP"],
+                    FrontCamera: ["12MP"],
+                    Battery: ["2438mAh"],
+                    Charging: ["20W Wired", "15W MagSafe"],
+                    OS: ["iOS 17"],
+                    Build: ["Aluminum + Glass"],
+                    Special: ["Cinematic Mode", "HDR Display"]
+                },
+                imageFolder: "images/iphonepictures"
+            },
+
+            iphone_13_pro: {
+                name: "iPhone 13 Pro",
+                storages: ["128GB", "256GB", "512GB", "1TB"],
+                colors: ["Silver", "Graphite", "Gold", "Sierra Blue", "Alpine Green"],
+                simOptions: ["eSIM Only", "Physical SIM Only", "Dual SIM (eSIM + Physical)"],
+                features: {
+                    Display: ["6.1” Super Retina XDR ProMotion 120Hz"],
+                    Resolution: ["2532 x 1170"],
+                    Chipset: ["A15 Bionic (5-core GPU)"],
+                    RearCamera: ["12MP + 12MP + 12MP"],
+                    FrontCamera: ["12MP"],
+                    Battery: ["3095mAh"],
+                    Charging: ["20W Wired", "15W MagSafe"],
+                    OS: ["iOS 17"],
+                    Build: ["Stainless Steel + Glass"],
+                    Special: ["ProMotion 120Hz", "Macro Photography", "ProRes Video"]
+                },
+                imageFolder: "images/iphonepictures"
+            },
+
+            iphone_13_pro_max: {
+                name: "iPhone 13 Pro Max",
+                storages: ["128GB", "256GB", "512GB", "1TB"],
+                colors: ["Silver", "Graphite", "Gold", "Sierra Blue", "Alpine Green"],
+                simOptions: ["eSIM Only", "Physical SIM Only", "Dual SIM (eSIM + Physical)"],
+                features: {
+                    Display: ["6.7” Super Retina XDR ProMotion 120Hz"],
+                    Resolution: ["2778 x 1284"],
+                    Chipset: ["A15 Bionic"],
+                    RearCamera: ["12MP + 12MP + 12MP"],
+                    FrontCamera: ["12MP"],
+                    Battery: ["4352mAh"],
+                    Charging: ["20W Wired", "15W MagSafe"],
+                    OS: ["iOS 17"],
+                    Build: ["Stainless Steel + Glass"],
+                    Special: ["ProMotion 120Hz", "Macro Photography", "ProRes Video", "Best Battery in 13 series"]
+                },
+                imageFolder: "images/iphonepictures"
+            },
+
+            //-- --------------- iPhone 14 Series ----------------
+            iphone_14: {
+                name: "iPhone 14",
+                storages: ["128GB", "256GB", "512GB"],
+                colors: ["Blue", "Purple", "Midnight", "Starlight", "Red", "Yellow"],
+                simOptions: ["eSIM Only", "Physical SIM Only", "Dual SIM (eSIM + Physical)"],
+                features: {
+                    Display: ["6.1” Super Retina XDR"],
+                    Resolution: ["2532 x 1170"],
+                    Chipset: ["A15 Bionic (5-core GPU)"],
+                    RearCamera: ["12MP + 12MP"],
+                    FrontCamera: ["12MP"],
+                    Battery: ["3279mAh"],
+                    Charging: ["20W Wired", "15W MagSafe"],
+                    OS: ["iOS 17"],
+                    Build: ["Aluminum + Glass"],
+                    Special: ["Crash Detection", "5G", "HDR Display"]
+                },
+                imageFolder: "images/iphonepictures"
+            },
+
+            iphone_14_plus: {
+                name: "iPhone 14 Plus",
+                storages: ["128GB", "256GB", "512GB"],
+                colors: ["Blue", "Purple", "Midnight", "Starlight", "Red", "Yellow"],
+                simOptions: ["eSIM Only", "Physical SIM Only", "Dual SIM (eSIM + Physical)"],
+                features: {
+                    Display: ["6.7” Super Retina XDR"],
+                    Resolution: ["2778 x 1284"],
+                    Chipset: ["A15 Bionic (5-core GPU)"],
+                    RearCamera: ["12MP + 12MP"],
+                    FrontCamera: ["12MP"],
+                    Battery: ["4325mAh"],
+                    Charging: ["20W Wired", "15W MagSafe"],
+                    OS: ["iOS 17"],
+                    Build: ["Aluminum + Glass"],
+                    Special: ["Best Battery in 14 series", "5G", "HDR Display"]
+                },
+                imageFolder: "images/iphonepictures"
+            },
+
+            iphone_14_pro: {
+                name: "iPhone 14 Pro",
+                storages: ["128GB", "256GB", "512GB", "1TB"],
+                colors: ["Deep Purple", "Gold", "Silver", "Space Black"],
+                simOptions: ["eSIM Only", "Physical SIM Only", "Dual SIM (eSIM + Physical)"],
+                features: {
+                    Display: ["6.1” Super Retina XDR ProMotion 120Hz"],
+                    Resolution: ["2556 x 1179"],
+                    Chipset: ["A16 Bionic"],
+                    RearCamera: ["48MP + 12MP + 12MP"],
+                    FrontCamera: ["12MP"],
+                    Battery: ["3200mAh"],
+                    Charging: ["20W Wired", "15W MagSafe"],
+                    OS: ["iOS 17"],
+                    Build: ["Stainless Steel + Glass"],
+                    Special: ["Dynamic Island", "48MP Main Camera", "ProMotion 120Hz", "HDR Display"]
+                },
+                imageFolder: "images/iphonepictures"
+            },
+
+            iphone_14_pro_max: {
+                name: "iPhone 14 Pro Max",
+                storages: ["128GB", "256GB", "512GB", "1TB"],
+                colors: ["Deep Purple", "Gold", "Silver", "Space Black"],
+                simOptions: ["eSIM Only", "Physical SIM Only", "Dual SIM (eSIM + Physical)"],
+                features: {
+                    Display: ["6.7” Super Retina XDR ProMotion 120Hz"],
+                    Resolution: ["2796 x 1290"],
+                    Chipset: ["A16 Bionic"],
+                    RearCamera: ["48MP + 12MP + 12MP"],
+                    FrontCamera: ["12MP"],
+                    Battery: ["4323mAh"],
+                    Charging: ["20W Wired", "15W MagSafe"],
+                    OS: ["iOS 17"],
+                    Build: ["Stainless Steel + Glass"],
+                    Special: ["Dynamic Island", "Best Battery", "ProMotion 120Hz", "HDR Display"]
+                },
+                imageFolder: "images/iphonepictures"
+            },
+
+            // ---------------- iPhone 15 Series ----------------
+            iphone_15_pro: {
+                name: "iPhone 15 Pro",
+                storages: ["128GB", "256GB", "512GB", "1TB"],
+                colors: ["Black Titanium", "White Titanium", "Blue Titanium", "Natural Titanium"],
+                simOptions: ["eSIM Only", "Physical SIM Only", "Dual SIM (eSIM + Physical)"],
+                features: {
+                    Display: ["6.1” Super Retina XDR"],
+                    Resolution: ["2556 x 1179"],
+                    Chipset: ["A17 Pro"],
+                    RearCamera: ["48MP + 12MP + 12MP"],
+                    FrontCamera: ["12MP"],
+                    Battery: ["3200mAh"],
+                    Charging: ["20W Wired", "15W MagSafe"],
+                    OS: ["iOS 17"],
+                    Build: ["Titanium Frame + Ceramic Shield"],
+                    Special: ["Action Button", "ProMotion 120Hz", "Dynamic Island"]
+                },
+                imageFolder: "images/iphonepictures"
+            },
+
+            iphone_15_pro_max: {
+                name: "iPhone 15 Pro Max",
+                storages: ["256GB", "512GB", "1TB"],
+                colors: ["Black Titanium", "White Titanium", "Blue Titanium", "Natural Titanium"],
+                simOptions: ["eSIM Only", "Physical SIM Only", "Dual SIM (eSIM + Physical)"],
+                features: {
+                    Display: ["6.7” Super Retina XDR"],
+                    Resolution: ["2796 x 1290"],
+                    Chipset: ["A17 Pro"],
+                    RearCamera: ["48MP + 12MP + 12MP"],
+                    FrontCamera: ["12MP"],
+                    Battery: ["4323mAh"],
+                    Charging: ["20W Wired", "15W MagSafe"],
+                    OS: ["iOS 17"],
+                    Build: ["Titanium Frame + Ceramic Shield"],
+                    Special: ["Action Button", "Dynamic Island", "USB-C 3.0"]
+                },
+                imageFolder: "images/iphonepictures"
+            },
+
+            //------------------ iPhone 16 Series ----------------
+            iphone_16: {
+                name: "iPhone 16",
+                storages: ["128GB", "256GB", "512GB"],
+                colors: ["Ultramarine", "Teal", "Pink", "White", "Black"],
+                simOptions: ["eSIM Only", "Physical SIM Only", "Dual SIM (eSIM + Physical)"],
+                features: {
+                    Display: ["6.1” Super Retina XDR"],
+                    Resolution: ["2556 x 1179"],
+                    Chipset: ["A18 Bionic"],
+                    RearCamera: ["48MP + 12MP + 12MP"],
+                    FrontCamera: ["12MP"],
+                    Battery: ["3300mAh"],
+                    Charging: ["20W Wired", "15W MagSafe"],
+                    OS: ["iOS 18"],
+                    Build: ["Aluminum + Glass"],
+                    Special: ["Capture Button", "Improved Thermal Design", "5G"]
+                },
+                imageFolder: "images/iphonepictures"
+            },
+
+            iphone_16_plus: {
+                name: "iPhone 16 Plus",
+                storages: ["128GB", "256GB", "512GB"],
+                colors: ["Ultramarine", "Teal", "Pink", "White", "Black"],
+                simOptions: ["eSIM Only", "Physical SIM Only", "Dual SIM (eSIM + Physical)"],
+                features: {
+                    Display: ["6.7” Super Retina XDR"],
+                    Resolution: ["2796 x 1290"],
+                    Chipset: ["A18 Bionic"],
+                    RearCamera: ["48MP + 12MP + 12MP"],
+                    FrontCamera: ["12MP"],
+                    Battery: ["4400mAh"],
+                    Charging: ["20W Wired", "15W MagSafe"],
+                    OS: ["iOS 18"],
+                    Build: ["Aluminum + Glass"],
+                    Special: ["Best Battery in 16 Plus", "5G", "HDR Display"]
+                },
+                imageFolder: "images/iphonepictures"
+            },
+
+            iphone_16_pro: {
+                name: "iPhone 16 Pro",
+                storages: ["256GB", "512GB", "1TB"],
+                colors: ["Natural Titanium", "Desert Titanium", "Black Titanium", "White Titanium"],
+                simOptions: ["eSIM Only", "Physical SIM Only", "Dual SIM (eSIM + Physical)"],
+                features: {
+                    Display: ["6.1” Super Retina XDR ProMotion 120Hz"],
+                    Resolution: ["2556 x 1179"],
+                    Chipset: ["A18 Pro Bionic"],
+                    RearCamera: ["48MP Quad Pixel + 12MP + 12MP"],
+                    FrontCamera: ["12MP"],
+                    Battery: ["3300mAh"],
+                    Charging: ["20W Wired", "15W MagSafe"],
+                    OS: ["iOS 18"],
+                    Build: ["Titanium Frame + Ceramic Shield"],
+                    Special: ["48MP Quad Pixel Camera", "New GPU", "ProMotion 120Hz", "Dynamic Island"]
+                },
+                imageFolder: "images/iphonepictures"
+            },
+
+            iphone_16_pro_max: {
+                name: "iPhone 16 Pro Max",
+                storages: ["256GB", "512GB", "1TB"],
+                colors: ["Natural Titanium", "Desert Titanium", "Black Titanium", "White Titanium"],
+                simOptions: ["eSIM Only", "Physical SIM Only", "Dual SIM (eSIM + Physical)"],
+                features: {
+                    Display: ["6.7” Super Retina XDR ProMotion 120Hz"],
+                    Resolution: ["2796 x 1290"],
+                    Chipset: ["A18 Pro Bionic"],
+                    RearCamera: ["48MP Quad Pixel + 12MP + 12MP"],
+                    FrontCamera: ["12MP"],
+                    Battery: ["4400mAh"],
+                    Charging: ["20W Wired", "15W MagSafe"],
+                    OS: ["iOS 18"],
+                    Build: ["Titanium Frame + Ceramic Shield"],
+                    Special: ["Best Camera", "Best Battery", "ProMotion 120Hz", "Dynamic Island"]
+                },
+                imageFolder: "images/iphonepictures"
+            },
+
+            iphone_16_e: {
+                name: "iPhone 16 e",
+                storages: ["128GB", "256GB"],
+                colors: ["Blue", "Black", "White"],
+                simOptions: ["eSIM Only", "Physical SIM Only", "Dual SIM (eSIM + Physical)"],
+                features: {
+                    Display: ["6.1” Super Retina XDR"],
+                    Resolution: ["2556 x 1179"],
+                    Chipset: ["A16 Bionic"],
+                    RearCamera: ["12MP + 12MP"],
+                    FrontCamera: ["12MP"],
+                    Battery: ["3200mAh"],
+                    Charging: ["20W Wired", "15W MagSafe"],
+                    OS: ["iOS 18"],
+                    Build: ["Aluminum + Glass"],
+                    Special: ["Budget Model", "5G", "HDR Display"]
+                },
+                imageFolder: "images/iphonepictures"
+            },
+
+            //------------------ iPhone 17 Series ----------------
+            iphone_17: {
+                name: "iPhone 17",
+                storages: ["128GB", "256GB", "512GB"],
+                colors: ["Silver", "Black", "Pink", "Blue"],
+                simOptions: ["eSIM Only", "Physical SIM Only", "Dual SIM (eSIM + Physical)"],
+                features: {
+                    Display: ["6.1” Super Retina XDR"],
+                    Resolution: ["2556 x 1179"],
+                    Chipset: ["A19 Bionic"],
+                    RearCamera: ["48MP + 12MP + 12MP"],
+                    FrontCamera: ["12MP"],
+                    Battery: ["3350mAh"],
+                    Charging: ["20W Wired", "15W MagSafe"],
+                    OS: ["iOS 19"],
+                    Build: ["Aluminum + Glass"],
+                    Special: ["Upgraded Cooling", "Longer Battery Life", "5G"]
+                },
+                imageFolder: "images/iphonepictures"
+            },
+
+            iphone_17_air: {
+                name: "iPhone 17 Air",
+                storages: ["128GB", "256GB"],
+                colors: ["Silver", "Black", "Peach"],
+                simOptions: ["eSIM Only", "Physical SIM Only", "Dual SIM (eSIM + Physical)"],
+                features: {
+                    Display: ["6.1” Super Retina XDR OLED"],
+                    Resolution: ["2556 x 1179"],
+                    Chipset: ["A19 Bionic"],
+                    RearCamera: ["48MP + 12MP"],
+                    FrontCamera: ["12MP"],
+                    Battery: ["3200mAh"],
+                    Charging: ["20W Wired", "15W MagSafe"],
+                    OS: ["iOS 19"],
+                    Build: ["Aluminum + Glass"],
+                    Special: ["Ultra-lightweight", "Budget-friendly", "5G"]
+                },
+                imageFolder: "images/iphonepictures"
+            },
+
+            iphone_17_pro: {
+                name: "iPhone 17 Pro",
+                storages: ["256GB", "512GB", "1TB"],
+                colors: ["Black Titanium", "Natural Titanium", "Blue Titanium"],
+                simOptions: ["eSIM Only", "Physical SIM Only", "Dual SIM (eSIM + Physical)"],
+                features: {
+                    Display: ["6.1” Super Retina XDR ProMotion 120Hz"],
+                    Resolution: ["2556 x 1179"],
+                    Chipset: ["A19 Pro Bionic"],
+                    RearCamera: ["48MP Quad Pixel + 12MP + 12MP"],
+                    FrontCamera: ["12MP"],
+                    Battery: ["3400mAh"],
+                    Charging: ["20W Wired", "15W MagSafe"],
+                    OS: ["iOS 19"],
+                    Build: ["Titanium Frame + Ceramic Shield"],
+                    Special: ["Advanced AI Camera", "ProMotion 120Hz", "Dynamic Island"]
+                },
+                imageFolder: "images/iphonepictures"
+            },
+
+            iphone_17_pro_max: {
+                name: "iPhone 17 Pro Max",
+                storages: ["256GB", "512GB", "1TB"],
+                colors: ["Black Titanium", "Natural Titanium", "Blue Titanium"],
+                simOptions: ["eSIM Only", "Physical SIM Only", "Dual SIM (eSIM + Physical)"],
+                features: {
+                    Display: ["6.7” Super Retina XDR ProMotion 120Hz"],
+                    Resolution: ["2796 x 1290"],
+                    Chipset: ["A19 Pro Bionic"],
+                    RearCamera: ["48MP Quad Pixel + 12MP + 12MP"],
+                    FrontCamera: ["12MP"],
+                    Battery: ["4500mAh"],
+                    Charging: ["20W Wired", "15W MagSafe"],
+                    OS: ["iOS 19"],
+                    Build: ["Titanium Frame + Ceramic Shield"],
+                    Special: ["Best Camera", "Best Battery", "ProMotion 120Hz", "Dynamic Island"]
+                },
+                imageFolder: "images/iphonepictures"
+            }
+
+        };
+
+        // ===============================================
+        // DOM References
+        // ===============================================
+        const modelSelect = document.getElementById("iphone_models");
+        const storageSelect = document.getElementById("storage_size");
+        const colorSelect = document.getElementById("color");
+        const unlockSelect = document.getElementById("unlock_status");
+        const simSelect = document.getElementById("sim_type");
+
+        const storageGroup = document.querySelector(".storage-group");
+        const colorGroup = document.querySelector(".color-group");
+        const simGroup = document.querySelector(".sim-group");
+
+        const previewModel = document.getElementById("previewModel");
+        const previewStorage = document.getElementById("previewStorage");
+        const previewColor = document.getElementById("previewColor");
+        const previewUnlockStatus = document.getElementById("previewUnlockStatus");
+        const previewSIM = document.getElementById("previewSIM");
+        const previewImage = document.getElementById("previewImage");
+
+        // ===============================================
+        // Populate Model Select
+        // ===============================================
+        Object.entries(deviceData).forEach(([key, phone]) => {
+            const opt = document.createElement("option");
+            opt.value = key;
+            opt.textContent = phone.name;
+            modelSelect.appendChild(opt);
+        });
+
+        // ===============================================
+        // Helpers
+        // ===============================================
+        function populateSelect(select, items) {
+            select.innerHTML = `<option value="">--Select--</option>`;
+            items.forEach(i => {
+                let opt = document.createElement("option");
+                opt.value = i;
+                opt.textContent = i;
+                select.appendChild(opt);
             });
+            select.disabled = false;
+        }
+
+        // Render features
+        function renderFeatures(features) {
+            const list = document.getElementById("featuresList");
+            list.innerHTML = "";
+
+            Object.entries(features).forEach(([category, items]) => {
+                const header = document.createElement("li");
+                header.textContent = category.toUpperCase();
+                header.style.fontWeight = "bold";
+                list.appendChild(header);
+
+                items.forEach(feature => {
+                    const li = document.createElement("li");
+                    li.textContent = "• " + feature;
+                    li.style.marginLeft = "15px";
+                    list.appendChild(li);
+                });
+            });
+        }
+
+        // ===============================================
+        // Update Preview
+        // ===============================================
+        function updatePreview() {
+            const model = modelSelect.value;
+            if (!model) return;
+
+            const storage = storageSelect.value;
+            const color = colorSelect.value;
+            const unlock = unlockSelect.value;
+            const sim = simSelect.value;
+
+            const data = deviceData[model];
+
+            previewModel.textContent = `→ Model: ${data.name}`;
+            previewStorage.textContent = `→ Storage: ${storage || "None"}`;
+            previewColor.textContent = `→ Color: ${color || "None"}`;
+            previewUnlockStatus.textContent = `→ Unlock Status: ${unlock || "None"}`;
+            previewSIM.textContent = `→ SIM Type: ${sim || "None"}`;
+
+            renderFeatures(data.features);
+
+            if (color) {
+                const colorFile = color.toLowerCase().replace(/\s+/g, "_").replace(/[()]/g, "");
+                const png = `${data.imageFolder}/${model}_${colorFile}.png`;
+                const jpg = `${data.imageFolder}/${model}_${colorFile}.jpg`;
+
+                previewImage.src = png;
+                previewImage.style.display = "block";
+                previewImage.onerror = () => previewImage.src = jpg;
             }
+        }
 
-            //Helper function to reset a select element
-            function resetSelect(selectElement) {
-                const title = selectElement.getAttribute("title") || "--Select Option";
-                selectElement.innerHTML = `<option value="">${title}</option>`;
-    
-                }
+        // ===============================================
+        // Event Listeners
+        // ===============================================
+        modelSelect.addEventListener("change", () => {
+            const model = modelSelect.value;
+            if (!model) return;
 
-            iphoneSelect.addEventListener("change",function(){
-                const selectedModel = iphoneSelect.value;
+            const data = deviceData[model];
 
-                // Reset and hide dependent fields
-                resetSelect(storageSelect);
-                resetSelect(colorSelect);
-                storageGroup.classList.add("hidden");
-                colorGroup.classList.add("hidden");
-                storageSelect.disabled = true;
-                colorSelect.disabled = true;
+            populateSelect(storageSelect, data.storages);
+            storageGroup.classList.remove("hidden");
 
-                previewModel.textContent = `→ Model: ${selectedModel ? selectedModel.replace(/_/g, " ") : "None"}`;
-                previewStorage.textContent = `→ Storage: None`;
-                previewColor.textContent = `→ Color: None`;
-                previewImage.style.display = 'none'; // Hide preview image
+            populateSelect(colorSelect, data.colors);
+            colorGroup.classList.remove("hidden");
 
-                if(selectedModel){
-                    //populate and show storage options if available
-                    if(storageOptions[selectedModel]){
-                        populateSelect(storageSelect, storageOptions[selectedModel]);
-                        storageGroup.classList.remove("hidden");
-                        storageSelect.disabled = false;
-                    }
+            populateSelect(simSelect, data.simOptions);
+            simGroup.classList.remove("hidden");
 
-                    //populate and show color options if available
-                    if(colorOptions[selectedModel]){
-                        populateSelect(colorSelect, colorOptions[selectedModel]);
-                        colorGroup.classList.remove("hidden");
-                        colorSelect.disabled = false;
-                    }
-                }
+            updatePreview();
+        });
 
-            }
-            
-            );
-            // Only trigger updatePreview when user picks storage or color
-            storageSelect.addEventListener('change', updatePreview);
-            colorSelect.addEventListener('change', updatePreview);
+        storageSelect.addEventListener("change", updatePreview);
+        colorSelect.addEventListener("change", updatePreview);
+        simSelect.addEventListener("change", updatePreview);
+        unlockSelect.addEventListener("change", updatePreview);
+    </script>
 
-    
-            const previewModel = document.getElementById('previewModel');
-            const previewStorage = document.getElementById('previewStorage');
-            const previewColor = document.getElementById('previewColor');
-            const previewImage = document.getElementById('previewImage');
-            
-            function updatePreview() {
-                const selectedModel = iphoneSelect.value;
-                const selectedStorage = storageSelect.value;
-                const selectedColor = colorSelect.value;
-            
-                previewModel.textContent = `→ Model: ${selectedModel ? selectedModel.replace(/_/g, " ") : "None"}`;
-                previewStorage.textContent = `→ Storage: ${selectedStorage || "None"}`;
-                previewColor.textContent = `→ Color: ${selectedColor || "None"}`;
-            
-                // Example: Set an image based on model (you can customize this)
-                if (selectedModel&&selectedColor) {
-                    //Format color properly (remove spaces, lowercase) to match your image filenames
-                    const colorFormatted = selectedColor.toLowerCase().replace(/\s+/g, "_").replace(/[()]/g, "");
-                    // Assume you have images named like "iphone_11_black.jpg, iphone_12_pro_max.png etc"
-                    let imagePathPng = `images/iphonepictures/${selectedModel}_${colorFormatted}.png`;
-                    let imagePathJpg = `images/iphonepictures/${selectedModel}_${colorFormatted}.jpg`;
+</body>
 
-                    //removing any previous animation class
-                    previewImage.classList.remove('visible');
-
-                    // Try setting it, and handle error (onerror fallback to default image)
-                    previewImage.src = imagePathPng; // Try loading PNG first
-                    previewImage.style.display = 'block';
-
-                    previewImage.onload = function(){
-                        previewImage.classList.add('visible'); // Fade in animation when image loads successfully
-                    };
-
-                    //if Png fails try loading JPG
-                    previewImage.onerror = function(){
-                        previewImage.onerror = null; // remove previous error handler to avoid infinite loop
-                        previewImage.src = imagepathJpg;
-                        previewImage.onload = function(){
-                            previewImage.classList.add('visible'); // Fade in animation when image loads successfully
-                        };
-
-                    // if loading fails, set fallback image
-                    previewImage.onerror = function(){
-                        this.onerror = null; // prevent infinite loop if fallback also fails 
-                        this.src = 'images/iphonepictures/default_preview.jpg'; // fallback image
-                        this.onload = function(){
-                            previewImage.classList.add('visible'); // Fade in fallback                     };
-                };
-            }; 
-        };  
-        } else {
-                    previewImage.style.display = 'none';
-                }
-            }
-            
-            //Event listeners to update preview when selections change
-            iphoneSelect.addEventListener('change', updatePreview);
-            storageSelect.addEventListener('change', updatePreview);
-            colorSelect.addEventListener('change', updatePreview);
-            
-
-            </script>
-            
-
-    </body>
 </html>
