@@ -1,7 +1,3 @@
-<!-- Updated Android Phones Page with RAM and Full Features Support -->
-<!-- Full fixed HTML + JS code injected into your structure -->
-<!-- Paste this into your project directly -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -143,7 +139,7 @@
             </div>
             <div class="footer-center">
                 <p class="footer-header">Contact:</p>
-                <p>Phone : +233 242 100 866<br>Email : addoyesamuel@gmail.com</p>
+                <p>Phone : +233 242 100 866<br>Email : samuel.oddoye@icloud.com</p>
             </div>
             <div class="footer-right">
                 <p class="footer-header">Follow Us:</p>
