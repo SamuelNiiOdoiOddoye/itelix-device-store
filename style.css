@@ -50,7 +50,7 @@
 
 /* General */
 body {
-    background-color: #7B7979;
+    background-color: #585757;
     font-family: "Inter Regular";
     margin: 0;
     padding: 0;
@@ -406,19 +406,23 @@ body {
 }
 
 /* Category Section */
-.categories-section {
+.categories-section,
+.cards-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
-    gap: 20px;
-    background-color: #756767;
+    gap: 32px;
+    background-color: #726b6b;
     padding: 40px 20px;
     flex-wrap: wrap;
     width: 100%;
     box-sizing: border-box;
 }
 
-.category {
+.category,
+.card,
+.card-mascot-image {
     text-align: center;
     background-color: #D9D9D9;
     padding: 15px;
@@ -428,14 +432,33 @@ body {
     width: 280px;
     margin: 10px;
     flex: 0 1 auto;
+    max-width: 350px;
+    min-width: 250px;
 }
 
-.category:hover {
+/* Specific rule for centering the third card beneath the top 2 */
+.cards-container .card:nth-child(3) {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.cards-container .card:nth-child(2)>* {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ADD HOVER for all item types */
+.category:hover,
+.card:hover,
+.card-mascot-image:hover {
     transform: scale(1.05);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
 }
 
-.category p {
+.category p,
+.card p,
+.card-mascot-image p {
     margin-top: 10px;
     font-size: 16px;
     font-weight: bold;
@@ -443,9 +466,9 @@ body {
     margin-bottom: 0;
 }
 
-
 /* Category Slideshow */
-.categories-section .slideshow-container {
+.categories-section .slideshow-container,
+.cards-container .slideshow-container {
     width: 100%;
     height: 200px;
     position: relative;
@@ -454,7 +477,8 @@ body {
     border-radius: 10px;
 }
 
-.categories-section .slide {
+.categories-section .slide,
+.cards-container .slide {
     display: none;
     position: absolute;
     width: 100%;
@@ -463,19 +487,22 @@ body {
     transition: opacity 0.5s ease-in-out;
 }
 
-.categories-section .slide.active {
+.categories-section .slide.active,
+.cards-container .slide.active {
     display: block;
     opacity: 1;
 }
 
-.categories-section .slide img {
+.categories-section .slide img,
+.cards-container .slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.categories-section .slideshow-dots {
+.categories-section .slideshow-dots,
+.cards-container .slideshow-dots {
     position: absolute;
     bottom: 10px;
     left: 50%;
@@ -485,7 +512,8 @@ body {
     z-index: 10;
 }
 
-.categories-section .dot {
+.categories-section .dot,
+.cards-container .dot {
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -494,11 +522,13 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.categories-section .dot.active {
+.categories-section .dot.active,
+.cards-container .dot.active {
     background-color: #FFFFFF;
 }
 
-.categories-section .dot:hover {
+.categories-section .dot:hover,
+.cards-container .dot:hover {
     background-color: rgba(255, 255, 255, 0.8);
 }
 
@@ -566,6 +596,67 @@ body {
     text-align: right;
 }
 
+/* Some other conflicting declarations might go here */
+/* 2-per-row layout with the 3rd card centered beneath */
+.cards-container {
+    /* override previous display:flex for this container only */
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+    justify-items: center;
+    /* centers items inside each grid cell */
+    align-items: start;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* make each .card inside .cards-container have the same fixed card width */
+.cards-container>.card {
+    width: 280px;
+    /* matches your existing card width */
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* force the 3rd card to span the whole row and center itself */
+.cards-container>.card:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+/* RESPONSIVE: on smaller screens switch to single-column */
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .cards-container>.card {
+        width: 100%;
+        max-width: 340px;
+    }
+
+    .cards-container>.card:nth-child(3) {
+        grid-column: auto;
+    }
+}
+
+/* EXTRA MOBILE FALLBACK: if other media queries later force flex, ensure small screens stack */
+@media (max-width: 480px) {
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .cards-container>.card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
 /* === RESPONSIVE MEDIA QUERIES === */
 
 /* Responsive adjustments for featured products */
@@ -591,6 +682,20 @@ body {
     .featured-products-category .slideshow-dots {
         bottom: 41%;
         /* Adjusted for tablet */
+    }
+
+    .categories-section,
+    .cards-container {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .category,
+    .card,
+    .card-mascot-image {
+        width: calc(50% - 30px);
+        min-width: 250px;
+        margin: 8px;
     }
 }
 
@@ -633,12 +738,15 @@ body {
         padding: 10px 15px;
     }
 
-    .categories-section {
+    .categories-section,
+    .cards-container {
         padding: 15px;
         gap: 15px;
     }
 
-    .category {
+    .category,
+    .card,
+    .card-mascot-image {
         width: calc(50% - 30px);
         min-width: 250px;
         margin: 8px;
@@ -733,14 +841,17 @@ body {
         height: 12px;
     }
 
-    .categories-section {
+    .categories-section,
+    .cards-container {
         flex-direction: column;
         padding: 10px;
         gap: 10px;
         align-items: center;
     }
 
-    .category {
+    .category,
+    .card,
+    .card-mascot-image {
         width: 100%;
         max-width: 300px;
         margin: 5px 0;
@@ -802,7 +913,8 @@ body {
         text-align: center;
     }
 
-    .categories-section .slideshow-container {
+    .categories-section .slideshow-container,
+    .cards-container .slideshow-container {
         height: 180px;
     }
 }
@@ -813,11 +925,14 @@ body {
         font-size: 20px;
     }
 
-    .category p {
+    .category p,
+    .card p,
+    .card-mascot-image p {
         font-size: 14px;
     }
 
-    .categories-section .slideshow-container {
+    .categories-section .slideshow-container,
+    .cards-container .slideshow-container {
         height: 160px;
     }
 
@@ -849,7 +964,9 @@ body {
 
 /* Large screens (1200px and above) */
 @media (min-width: 1200px) {
-    .categories-section {
+
+    .categories-section,
+    .cards-container {
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -859,12 +976,16 @@ body {
 
 /* Desktop (992px and above) - FORCE 4 CATEGORIES IN ONE ROW */
 @media (min-width: 992px) {
-    .categories-section {
+
+    .categories-section,
+    .cards-container {
         justify-content: center;
         flex-wrap: nowrap;
     }
 
-    .category {
+    .category,
+    .card,
+    .card-mascot-image {
         flex: 0 0 auto;
         width: 280px;
     }
@@ -872,7 +993,9 @@ body {
 
 /* Large screens (1200px and above) - ENSURE 4 IN A ROW */
 @media (min-width: 1200px) {
-    .categories-section {
+
+    .categories-section,
+    .cards-container {
         max-width: 1300px;
         margin: 0 auto;
         justify-content: center;
@@ -882,11 +1005,15 @@ body {
 
 /* Tablets (768px to 991px) - 2 CATEGORIES PER ROW */
 @media (min-width: 768px) and (max-width: 991px) {
-    .categories-section {
+
+    .categories-section,
+    .cards-container {
         justify-content: center;
     }
 
-    .category {
+    .category,
+    .card,
+    .card-mascot-image {
         width: calc(50% - 30px);
         min-width: 250px;
         margin: 15px;
@@ -895,11 +1022,15 @@ body {
 
 /* Small tablets (481px to 767px) */
 @media (min-width: 481px) and (max-width: 767px) {
-    .categories-section {
+
+    .categories-section,
+    .cards-container {
         justify-content: center;
     }
 
-    .category {
+    .category,
+    .card,
+    .card-mascot-image {
         width: calc(50% - 20px);
         margin: 10px;
     }
