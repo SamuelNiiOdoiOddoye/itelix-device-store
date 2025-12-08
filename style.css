@@ -436,6 +436,15 @@ body {
     min-width: 250px;
 }
 
+.card-mascot-image img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    object-fit: contain;
+}
+
 /* Specific rule for centering the third card beneath the top 2 */
 .cards-container .card:nth-child(3) {
     flex-basis: 100%;
@@ -624,39 +633,6 @@ body {
     justify-self: center;
 }
 
-/* RESPONSIVE: on smaller screens switch to single-column */
-@media (max-width: 768px) {
-    .cards-container {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .cards-container>.card {
-        width: 100%;
-        max-width: 340px;
-    }
-
-    .cards-container>.card:nth-child(3) {
-        grid-column: auto;
-    }
-}
-
-/* EXTRA MOBILE FALLBACK: if other media queries later force flex, ensure small screens stack */
-@media (max-width: 480px) {
-    .cards-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .cards-container>.card {
-        width: 100%;
-        max-width: 300px;
-    }
-}
-
-
 /* === RESPONSIVE MEDIA QUERIES === */
 
 /* Responsive adjustments for featured products */
@@ -786,6 +762,21 @@ body {
         min-width: 150px;
         flex: 1;
     }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .cards-container>.card {
+        width: 100%;
+        max-width: 340px;
+    }
+
+    .cards-container>.card:nth-child(3) {
+        grid-column: auto;
+    }
+
 }
 
 /* Mobile Phones (480px and below) */
@@ -917,6 +908,32 @@ body {
     .cards-container .slideshow-container {
         height: 180px;
     }
+
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .cards-container>.card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .card-mascot-image img {
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .card-mascot-image {
+        width: 100%;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
 }
 
 /* Very small phones (360px and below) */
