@@ -1052,3 +1052,78 @@ body {
         margin: 10px;
     }
 }
+
+/* === Centered 4-per-row categories grid (override) ===
+   Place this at the end of style.css so it overrides earlier .categories-section rules.
+   Adjust the 280px value if your card width differs. */
+
+.categories-section {
+    /* Use grid to get deterministic rows/columns and center the whole grid */
+    display: grid !important;
+    grid-template-columns: repeat(4, 280px);
+    /* 4 columns of fixed card width */
+    justify-content: center;
+    /* center the grid within the container */
+    gap: 32px;
+    /* spacing between cards */
+    padding: 40px 20px;
+    /* keep existing padding */
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    /* center the containing area */
+    background-color: #726b6b;
+    /* keep background from original */
+}
+
+/* Ensure each card sits centered in its grid cell and keeps the expected width */
+.categories-section>.category,
+.categories-section>.card,
+.categories-section>.card-mascot-image {
+    width: 280px;
+    /* same as grid column width */
+    max-width: 100%;
+    justify-self: center;
+    margin: 0;
+    /* remove extra margin that could affect centering */
+    box-sizing: border-box;
+}
+
+/* Responsive breakpoints */
+/* Large desktops: keep 4 columns */
+@media (min-width: 1300px) {
+    .categories-section {
+        grid-template-columns: repeat(4, 280px);
+    }
+}
+
+/* Desktop / large tablet: 3 columns */
+@media (min-width: 992px) and (max-width: 1299px) {
+    .categories-section {
+        grid-template-columns: repeat(3, 280px);
+    }
+}
+
+/* Tablets: 2 columns */
+@media (min-width: 768px) and (max-width: 991px) {
+    .categories-section {
+        grid-template-columns: repeat(2, 280px);
+    }
+}
+
+/* Mobile: 1 column, stacked and centered */
+@media (max-width: 767px) {
+    .categories-section {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 20px 12px;
+    }
+
+    .categories-section>.category,
+    .categories-section>.card,
+    .categories-section>.card-mascot-image {
+        width: 100%;
+        max-width: 340px;
+        /* caps card width on small screens */
+    }
+}
