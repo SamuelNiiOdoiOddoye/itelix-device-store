@@ -1,0 +1,79 @@
+Documentation On Itelix Features and Views
+
+Chapter 1 : Introduction
+The iTelix device store is a feature rich multi-vendor eCommerce store, designed to help you build, manage and scale your marketplace with ease. Whether you want to manage multiple independent vendors or run your own in-house store, iTelix offers the flexibility to operate locally or expand globally.
+iTelix’s standout feature is adaptability, making you seamless transition from multiple vendors to single-vendor modes at any time, giving you complete control over your business model, our aim is to be your number plug for anything technology or accessory related. iTelix provides a seamless experience across web and mobile platforms.
+
+Technologies Behind iTelix
+Solution / Module Technology	/ Key Features
+
+-#- Super Admin Panel /	#	/ Role-based access, commission management, built-in POS, order & delivery management, promotions, and in-house shop control.
+-#- Vendor Panel / # / Full vendor product management and sales tracking.
+-#- Website / # / Fully responsive, cross-device compatibility.
+-#- Customer App / # /	Available on Android & iOS for seamless shopping.
+-#- Deliveryman App / # / Android & iOS support for order tracking and delivery.
+-#- Vendor App / #	/ Android & iOS access for vendor operations.
+
+
+Chapter 2:  Vendor Registration and Sign Up
+    - First of all, you need to register as a vendor and submit your documents for verification purposes, in the scenario you are an upcoming enterprise or entrepreneur without the needed documentation, you would need to upload the following documents for verification purposes: 
+1.	Your National Id
+2.	A Recent Picture not older than 3 months
+3.	Provide you with the location and goods you will be selling for documentation purposes.
+4.	You would need a Guarantor (A verified Vendor who has been on Itelix for more than 6 months)
+5.	An account you want payments to be made to and paid out from.
+6.	Your Tax documentation is need, if not too, we would help you apply for it.
+7.	You can then customize your store; accordingly, you can make changes later which would be submitted for a review and take 3 to 7 business days to be reviewed.
+8.	After your vendor profile creation note that all sales you make would be paid to you in these options: Weekly, Bi-Weekly, Monthly or Quarterly.
+
+Chapter 3: Customer Registration and Sign Up
+    - First of all, you need to register as a customer and submit your documents for verification purposes,
+    - A recent picture of not older than 3 months
+    - An account payments would be made from and be made to in the event of a refund or any other scenario that requires money to be sent to you.
+    - Your full name (and any other details you specifiy) would be displayed towards the vendor only. You would be visible to everyone else as your nickname of choice.
+    - 
+
+Chapter 4: Customer View
+#General Stuff
+    - The customer would see the featured devices setion and a categories section that currently holds : Androids phones, iphones, Tablets, Laptops.
+    - The customer should be able to see s full specs list of the particular item they are viewing
+    - The customer would be able to see and interact with a 3d model of the device they are currently shopping, compare the prices and features with other stores in app if they are a premium user they would be able to comapare the pricing on other external factors as well as see current rates in thier local markets
+    - There should also be an algorithm where the users see's items they mostly search for, most items bought with items they search and a recommendation section.
+    - There should be a feedback section where the previous buyers leave reviews which would be seen by others.
+    - There should also be a section where users can comment on they're views or questions about an item on sale, which can then be replied to by others.
+    - There should be a portal for customers to relay they're issues to customer service via the app and receive a response via a dm to a platform of they're choosing for convenience.
+
+# Home Page View
+    - There is a featured device section showing all devices on sale or devices that currently have a discounted price.
+        In this section you have the following:
+         - Device name
+         - The device's List price
+         - The current price under the discount
+         - A button to see the full page of the device, it's specifications, whether it has undergone repairs before or not and it's fault if there's a fault and it's 3d model as well as high quality pictures of it's current state.
+
+    - There is a categories section which currently has ( Iphones, Android Phones, Laptops, Tablets) each of these categories has a slideshow of at least 4 devices 
+
+    - Beneath is a footer with :
+        # About us [ Terms & Conditions]
+        # Contact [ Phone number, Email address]
+        # Follow us [ a link to contact us via whatsapp, Twitter, Instagram and Snapchat]
+
+# Assitance Page View
+    - There are icons for Our Store Icon, Orders & Purchases, My Account, Product Repair & support
+    - There is a textfield below where users can input thier struggle or enquiry and tell us how to respond to them (they also provide thier username) and we respond to them via that method.
+    - Upon inputing thier issue there should be a feedback alerting them the issue has been reported as well as providing them they're case id and sending them an email to the address they provided so they can keep they're case id for later troubles.  
+
+    * Upon clicking the Orders & Purchases icon : 
+        - Users should be able to see items in thier cart, past purchases and refunded purchases
+
+    * Upon clicking My Account icon :
+        - Users should be able to edit Name, Username ( Nickname), Date Of Birth, Profile Picture, Address and Payment Details
+
+    * Upon clicking Product Repair & Support : 
+        - Users should be able to submit pictures of the state of the device and select the repairs the want with the materials they want as well for an estimate on the cost of repairs.
+        - Users should be able to submit customization details they want to get an estimate on the cost.
+
+# Accessories Page View
+    - There             
+
+Chapter 5: Vendor View
