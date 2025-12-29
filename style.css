@@ -151,14 +151,14 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background-color: #EFE0E0;
+    background-color: #726b6b;
     font-family: "Indie Flower Regular";
     text-align: center;
     padding: 20px 0;
 }
 
 .custom-pre {
-    background-color: #EFE0E0;
+    background-color: #726b6b;
     font-size: small;
     font-family: "Indie Flower Regular";
     text-align: center;
@@ -167,7 +167,7 @@ body {
 }
 
 .hero-section-header {
-    background-color: inherit;
+    background-color: #726b6b;
     font-family: "Inria Sans Regular";
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
