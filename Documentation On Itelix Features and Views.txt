@@ -87,12 +87,15 @@ Chapter 4: Customer View
         - 
 
 Chapter 5: Vendor View
+    # 
 
-Chapter 6: 
+Chapter 6: Features To Implement
     - To Do
         ## Add an icon for account in the nav bar
-            ### The nav bar should have the following
-                #### - Vendor
-                     - Customer
+            ### The nav bar should have the following under account in the nav bar
+                #### - Vendor Account Management
+                     - Customer Account Management
                      - Become a Vendor
                      - Become a customer
+
+45, sad boys don't fold, lord i'm amazed, victory, so it goes, country side, yaya, soma obi,  
