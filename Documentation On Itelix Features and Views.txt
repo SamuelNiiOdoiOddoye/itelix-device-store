@@ -90,7 +90,11 @@ Chapter 5: Vendor View
     # 
 
 Chapter 6: Features To Implement
-    - To Do
+
+    - To Do 
+        ## Add a text box and an animation for the assistance page 
+
+    - To Do (Done on 5th/JAN/2026)
         ## Add an icon for account in the nav bar
             ### The nav bar should have the following under account in the nav bar
                 #### - Vendor Account Management

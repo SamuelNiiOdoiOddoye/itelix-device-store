@@ -936,6 +936,107 @@ body {
 
 }
 
+/* Styling for the assistance.html page */
+
+#assistance-form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: "Inter Regular";
+}
+
+#assistance-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: "Inria Sans Bold";
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: "Inter Regular";
+    font-size: 16px;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+
+button {
+    background-color: #0078d7;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Inter Bold";
+    font-size: 16px;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+
+.button:hover {
+    background-color: #005a9e;
+}
+
+.feedback {
+    margin-top: 15px;
+    color: green;
+    display: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width : 768px) {
+    #assistance-form {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    #assistance-form h2 {
+        font-size: 24px;
+    }
+
+    textarea {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #assistance-form {
+        margin: 10px 5px;
+        padding: 10px;
+    }
+
+    #assistance-form h2 {
+        font-size: 20px;
+    }
+
+    textarea {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .button {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+}
+
 /* Very small phones (360px and below) */
 @media (max-width: 360px) {
     .hero-section-header {

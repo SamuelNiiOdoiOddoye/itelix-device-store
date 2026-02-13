@@ -99,6 +99,13 @@
 
     </div>
 
+    <div id="assistance form">
+        <h2>Contact Support</h2>
+        <textarea id="problem" placeholder="Type your problem here..." rows="5"></textarea>
+        <button onclick="sendProblem()" class="button">Submit</button>
+        <div id="feedback" class="feedback">✅ Your request has been sent!</div>
+    </div>
+
     <!--This is the code for the footer section-->
     <footer class="footer">
 
@@ -147,6 +154,14 @@
     </footer>
 
     <script src="./slideshow.js"></script>
+    <script>
+        function sendProblem() {
+            // Simulate sending to support
+            document.getElementById("feedback").style.display = "block";
+            document.getElementById("problem").value = "";
+        }
+
+    </script>
 </body>
 
 </html>
